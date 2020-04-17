@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+'''from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.contrib import messages
 # Create your views here.
@@ -13,4 +13,4 @@ def register(response):
 	else:		
 		form = RegisterForm()
 
-	return render(response,"Register/register.html",{'form':form})
+	return render(response,"Register/register.html",{'form':form})'''

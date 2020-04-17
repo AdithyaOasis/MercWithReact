@@ -5,6 +5,7 @@ from Clubs.models import Club
 
 
 class ClubViewSet(viewsets.ModelViewSet):
+    queryset = Club.objects.all()
     permission_classes = [
         permissions.AllowAny,
     ]

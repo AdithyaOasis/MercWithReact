@@ -5,6 +5,7 @@ from .models import Project
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
+    queryset = Project.objects.all()
     permission_classes = [
         permissions.AllowAny,
     ]

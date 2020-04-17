@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
-app_name='Main'
+app_name = 'Main'
 urlpatterns = [
-    path('home/',views.home,name='home'),
-    path('clublist/',views.clubList,name='clubList'),
-    path('profile/',views.profile,name='profile'),
+    path('home/', views.home, name='home'),
+    ''' path('clublist/',views.clubList,name='clubList'),
+    path('profile/',views.profile,name='profile'),'''
 ]

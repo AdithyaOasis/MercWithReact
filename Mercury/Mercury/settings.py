@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'Mercury.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mercwithreact',   # Make database Mercury
+        'NAME': 'mercurywithreact',   # Make database Mercury
         'USER': uSer,
         'PASSWORD': pword,  # Go to words.py to specify the password value
         'HOST': hOst,

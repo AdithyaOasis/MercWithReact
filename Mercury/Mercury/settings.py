@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'Clubs.apps.ClubsConfig',
     'Projects.apps.ProjectsConfig',
     'Main.apps.MainConfig',
-    'Register.apps.RegisterConfig',
+    # 'Register.apps.RegisterConfig',
     'frontend',
     'rest_framework',
     'knox'

@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from "react";
-import Header_Projects from "../layout/Header_Projects";
+import Header_Home from "../../layout/Header_Home";
 export class Clubs extends Component {
   render() {
     return (
       <Fragment>
-        <Header_Projects />
-        <h1>Clubs</h1>
+        <Header_Home />
+        <h1> Home/ClubList</h1>
       </Fragment>
     );
   }

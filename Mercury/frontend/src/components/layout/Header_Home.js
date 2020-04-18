@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import { Link } from "react-router-dom";
 export class Header_Home extends Component {
   render() {
     return (
@@ -10,15 +11,17 @@ export class Header_Home extends Component {
           </div>
           <div className="container">
             <nav className="navbar navbar-expand-lg ">
-              <a className="navbar-brand col-sm-4" href="#">
+              <Link className="navbar-brand col-sm-4" to="/">
                 Home
-              </a>
-              <a className="navbar-brand col-sm-4" href="#">
+              </Link>
+
+              <Link className="navbar-brand col-sm-4" to="/Home/clubs">
                 Clubs
-              </a>
-              <a className="navbar-brand col-sm-4" href="#">
+              </Link>
+
+              <Link className="navbar-brand col-sm-4" to="/Home/profile">
                 Profile
-              </a>
+              </Link>
             </nav>
           </div>
         </div>

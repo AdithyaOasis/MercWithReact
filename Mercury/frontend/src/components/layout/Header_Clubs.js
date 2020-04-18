@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 export class Header_Clubs extends Component {
   render() {
     return (
@@ -10,15 +10,17 @@ export class Header_Clubs extends Component {
           </div>
           <div className="container">
             <nav className="navbar navbar-expand-lg ">
-              <a className="navbar-brand col-sm-4" href="#">
+              <Link className="navbar-brand col-sm-4" to="/club">
                 Home
-              </a>
-              <a className="navbar-brand col-sm-4" href="#">
+              </Link>
+
+              <Link className="navbar-brand col-sm-4" to="/club/Projects">
                 Projects
-              </a>
-              <a className="navbar-brand col-sm-4" href="#">
+              </Link>
+
+              <Link className="navbar-brand col-sm-4" to="/club/Members">
                 Members
-              </a>
+              </Link>
             </nav>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 export class Header_Projects extends Component {
   render() {
     return (
@@ -8,17 +8,20 @@ export class Header_Projects extends Component {
           <div>
             <h1>Mercury</h1>
           </div>
+
           <div className="container">
             <nav className="navbar navbar-expand-lg ">
-              <a className="navbar-brand col-sm-4" href="#">
+              <Link className="navbar-brand col-sm-4" to="/project/">
                 Home
-              </a>
-              <a className="navbar-brand col-sm-4" href="#">
-                Description
-              </a>
-              <a className="navbar-brand col-sm-4" href="#">
+              </Link>
+
+              <Link className="navbar-brand col-sm-4" to="/project/desc">
+                Desc
+              </Link>
+
+              <Link className="navbar-brand col-sm-4" to="/project/members">
                 Members
-              </a>
+              </Link>
             </nav>
           </div>
         </div>

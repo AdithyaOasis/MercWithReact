@@ -9,7 +9,7 @@ export class Home extends Component {
         <h1>Clubs</h1>
         <div className="container">
           <div className="row">
-            <div className="col-3-sm">
+            <div className="col-sm-4 border border-dark">
               <Todoapp />
             </div>
           </div>

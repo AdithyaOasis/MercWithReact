@@ -20,6 +20,8 @@ import P_Home from "./pages/Projects/Home";
 import P_Desc from "./pages/Projects/Description";
 import P_Members from "./pages/Projects/Members";
 import Header from "./layout/Header_Home";
+import Login from "./auth/Login";
+import Register from "./auth/Register";
 
 const alertOptions = {
   timeout: 3000,
@@ -41,6 +43,8 @@ export class App extends Component {
               <Route exact path="/project" component={P_Home} />
               <Route exact path="/project/desc" component={P_Desc} />
               <Route exact path="/project/members" component={P_Members} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/login" component={Login} />
             </Switch>
             what about now?
           </Fragment>

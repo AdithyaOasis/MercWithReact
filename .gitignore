@@ -1,7 +1,7 @@
 node_modules
 pycache
 migrations/
-/Mercury/words.py
+words.py
 *.log
 *.pot
 *.pyc

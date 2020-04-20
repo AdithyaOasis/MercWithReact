@@ -19,10 +19,11 @@ import C_Members from "./pages/Clubs/Members";
 import P_Home from "./pages/Projects/Home";
 import P_Desc from "./pages/Projects/Description";
 import P_Members from "./pages/Projects/Members";
-import Header from "./layout/Header_Home";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
-
+import Main_Header from "./layout/Main_Header";
+import Header_login from "./layout/LoginHeaders/Header_login";
+//import "./Styles.css";
 const alertOptions = {
   timeout: 3000,
   position: "top center",
@@ -32,9 +33,12 @@ export class App extends Component {
     return (
       <Provider store={store}>
         <Router>
+          <Main_Header />
+
           <Fragment>
             <Switch>
               <Route exact path="/" component={H_Home} />
+              <Route exact path="/Home" component={H_Home} />
               <Route exact path="/Home/clubs" component={H_Clubs} />
               <Route exact path="/Home/Profile" component={H_Profile} />
               <Route exact path="/club" component={C_Home} />

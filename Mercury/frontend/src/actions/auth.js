@@ -47,28 +47,23 @@ export const loaduser = () => (dispatch, getState) => {
     });
 };
 
-export const login = (username, password) => (dispatch, getState) => {
+export const login = (username, password) => (dispatch) => {
+  // Headers
   const config = {
     headers: {
       "Content-Type": "application/json",
     },
   };
+
+  // Request Body
   const body = JSON.stringify({ username, password });
-  console.log({ username });
-  axios
-    .post("api/auth/login", body, config)
-    .then((res) => {
-      dispatch({
-        type: LOGIN_SUCCESS,
-        payload: res.data,
-      });
-    })
-    .catch((err) => {
-      console.log(body);
-      dispatch({
-        type: LOGIN_FAIL,
-      });
+
+  axios.post("/api/auth/login", body, config).then((res) => {
+    dispatch({
+      type: LOGIN_SUCCESS,
+      payload: res.data,
     });
+  });
 };
 
 export const register = ({ username, password, email }) => (dispatch) => {
@@ -81,7 +76,6 @@ export const register = ({ username, password, email }) => (dispatch) => {
 
   //Request Body
   const body = JSON.stringify({ username, email, password });
-  console.log(body);
 
   axios
     .post("/api/auth/register", body, config)
@@ -93,6 +87,7 @@ export const register = ({ username, password, email }) => (dispatch) => {
     })
     .catch((err) => {
       //dispatch(returnErrors(err.response.data, err.response.status));
+      console.log(res);
       dispatch({
         type: REGISTER_FAIL,
       });

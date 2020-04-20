@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from Projects.models import Project
+from django.utils import timezone
+import datetime
 # Create your models here.
 
 
@@ -16,7 +18,7 @@ class Club(models.Model):
         return self.club_name
 
     def startedNow(self):
-        return self.date_Started >= datetime.date.today()
+        return self.date_Started >= timezone.now() - datetime.timedelta(days=1)
 
 
 class Members(models.Model):

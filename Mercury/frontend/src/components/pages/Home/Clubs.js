@@ -1,11 +1,34 @@
 import React, { Component, Fragment } from "react";
-import Header_Home from "../../layout/Header_Home";
+import axios from "axios";
 export class Clubs extends Component {
+  state = {
+    list: [],
+  };
+  componentDidMount() {
+    axios.get("./api/clubs").then((res) => {
+      const list = res.data;
+      this.setState({ list });
+    });
+  }
   render() {
     return (
       <Fragment>
-        <Header_Home />
-        <h1> Home/ClubList</h1>
+        <div>
+          <h2>ACTIVE CLUBS:- </h2>
+        </div>
+        <div>
+          <div className="list-group">
+            {this.state.list.map((club) => (
+              <a
+                key={club.id}
+                href="#"
+                className="list-group-item list-group-item-action"
+              >
+                {club.club_name}
+              </a>
+            ))}
+          </div>
+        </div>
       </Fragment>
     );
   }

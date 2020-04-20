@@ -21,7 +21,7 @@ export class Clubs extends Component {
             {this.state.list.map((club) => (
               <a
                 key={club.id}
-                href="#"
+                href="/#/club"
                 className="list-group-item list-group-item-action"
               >
                 {club.club_name}

@@ -1,6 +1,7 @@
 import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
+  LOGOUT_SUCCESS,
   USER_LOADING,
   USER_LOADED,
   AUTH_ERROR,
@@ -39,6 +40,7 @@ export default function (state = initialState, actions) {
     case LOGIN_FAIL:
     case AUTH_ERROR:
     case REGISTER_FAIL:
+    case LOGOUT_SUCCESS:
       return {
         ...state,
         isAuthenticated: false,

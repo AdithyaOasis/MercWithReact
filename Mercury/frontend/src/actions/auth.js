@@ -8,6 +8,7 @@ import {
   REGISTER_FAIL,
   REGISTER_SUCCESS,
   LOGOUT_SUCCESS,
+  LOGOUT_FAIL,
 } from "./types";
 
 //just a function we are using
@@ -58,12 +59,20 @@ export const login = (username, password) => (dispatch) => {
   // Request Body
   const body = JSON.stringify({ username, password });
 
-  axios.post("/api/auth/login", body, config).then((res) => {
-    dispatch({
-      type: LOGIN_SUCCESS,
-      payload: res.data,
+  axios
+    .post("/api/auth/login", body, config)
+    .then((res) => {
+      dispatch({
+        type: LOGIN_SUCCESS,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      console.log("Error");
+      dispatch({
+        type: LOGIN_FAIL,
+      });
     });
-  });
 };
 
 export const register = ({ username, password, email }) => (dispatch) => {

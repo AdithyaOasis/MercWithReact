@@ -1,5 +1,5 @@
 node_modules
-pycache
+__pycache__/
 migrations/
 Mercury/Mercury/words.py
 *.log

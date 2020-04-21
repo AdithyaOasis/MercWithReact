@@ -15,7 +15,7 @@ const initialState = {
   isLoading: false,
   user: null,
 };
-
+//clubList is all the clubs the user is a part of...
 export default function (state = initialState, actions) {
   switch (actions.type) {
     case USER_LOADING:

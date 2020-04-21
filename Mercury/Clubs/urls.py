@@ -16,8 +16,14 @@ Including another URLconf
 from django.urls import path, include
 from .api import ClubViewSet
 from rest_framework import routers
+from .api import NewViews
 
 router = routers.DefaultRouter()
+#router.register('api/clubs/page', NewViewSet, 'Page')
 router.register('api/clubs', ClubViewSet, 'Clubs')
 
-urlpatterns = router.urls
+urlpatterns = [
+    path("api/clubs/club", NewViews.as_view()),
+]
+
+urlpatterns += router.urls

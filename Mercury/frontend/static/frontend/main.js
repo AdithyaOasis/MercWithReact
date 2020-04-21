@@ -219,7 +219,35 @@ var logout = function logout() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"clubEnter\", function() { return clubEnter; });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ \"./Mercury/frontend/src/actions/types.js\");\n //import { tokenConfig } from \"./auth\"; to be used for more secure\n\n\nvar clubEnter = function clubEnter(id) {\n  return function (dispatch, getState) {\n    var config = {\n      headers: {\n        \"Content-Type\": \"application/json\"\n      }\n    };\n    var body = JSON.stringify({\n      id: id\n    });\n    console.log(body);\n    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(\"/api/clubs/club\", body, config).then(function (res) {\n      dispatch({\n        type: _types__WEBPACK_IMPORTED_MODULE_1__[\"CLUB_LOADED\"],\n        payload: res.data\n      });\n    })[\"catch\"](function (err) {\n      console.log(err);\n    });\n  };\n};\n\n//# sourceURL=webpack:///./Mercury/frontend/src/actions/clubs.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clubEnter", function() { return clubEnter; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./Mercury/frontend/src/actions/types.js");
+ //import { tokenConfig } from "./auth"; to be used for more secure
+
+
+var clubEnter = function clubEnter(id) {
+  return function (dispatch, getState) {
+    var config = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+    var body = JSON.stringify({
+      id: id
+    });
+    console.log(body);
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/clubs/club", body, config).then(function (res) {
+      dispatch({
+        type: _types__WEBPACK_IMPORTED_MODULE_1__["CLUB_LOADED"],
+        payload: res.data
+      });
+    })["catch"](function (err) {
+      console.log(err);
+    });
+  };
+};
 
 /***/ }),
 
@@ -231,9 +259,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-<<<<<<< HEAD
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"LOGIN_SUCCESS\", function() { return LOGIN_SUCCESS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"LOGOUT_SUCCESS\", function() { return LOGOUT_SUCCESS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"LOGOUT_FAIL\", function() { return LOGOUT_FAIL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"LOGIN_FAIL\", function() { return LOGIN_FAIL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"USER_LOADING\", function() { return USER_LOADING; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"USER_LOADED\", function() { return USER_LOADED; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"AUTH_ERROR\", function() { return AUTH_ERROR; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"REGISTER_SUCCESS\", function() { return REGISTER_SUCCESS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"REGISTER_FAIL\", function() { return REGISTER_FAIL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CLUB_LOADED\", function() { return CLUB_LOADED; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CLUB_UNLOAD\", function() { return CLUB_UNLOAD; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CLUB_LOAD_FAIL\", function() { return CLUB_LOAD_FAIL; });\nvar LOGIN_SUCCESS = \"LOGIN_SUCCESS\";\nvar LOGOUT_SUCCESS = \"LOGOUT_SUCCESS\";\nvar LOGOUT_FAIL = \"LOGOUT_FAIL\";\nvar LOGIN_FAIL = \"LOGIN_FAIL\";\nvar USER_LOADING = \"USER_LOADING\";\nvar USER_LOADED = \"USER_LOADED\";\nvar AUTH_ERROR = \"AUTH_ERROR\";\nvar REGISTER_SUCCESS = \"REGISTER_SUCCESS\";\nvar REGISTER_FAIL = \"REGISTER_FAIL\";\nvar CLUB_LOADED = \"CLUB_LOADED\";\nvar CLUB_UNLOAD = \"CLUB_UNLOAD\";\nvar CLUB_LOAD_FAIL = \"CLUB_LOAD_FAIL\";\n\n//# sourceURL=webpack:///./Mercury/frontend/src/actions/types.js?");
-=======
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGIN_SUCCESS", function() { return LOGIN_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGOUT_SUCCESS", function() { return LOGOUT_SUCCESS; });
@@ -244,6 +269,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AUTH_ERROR", function() { return AUTH_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REGISTER_SUCCESS", function() { return REGISTER_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REGISTER_FAIL", function() { return REGISTER_FAIL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CLUB_LOADED", function() { return CLUB_LOADED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CLUB_UNLOAD", function() { return CLUB_UNLOAD; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CLUB_LOAD_FAIL", function() { return CLUB_LOAD_FAIL; });
 var LOGIN_SUCCESS = "LOGIN_SUCCESS";
 var LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
 var LOGOUT_FAIL = "LOGOUT_FAIL";
@@ -253,7 +281,9 @@ var USER_LOADED = "USER_LOADED";
 var AUTH_ERROR = "AUTH_ERROR";
 var REGISTER_SUCCESS = "REGISTER_SUCCESS";
 var REGISTER_FAIL = "REGISTER_FAIL";
->>>>>>> 85a882e7a79fe88ffdf3cfa6ea58b2a4ee8c8b57
+var CLUB_LOADED = "CLUB_LOADED";
+var CLUB_UNLOAD = "CLUB_UNLOAD";
+var CLUB_LOAD_FAIL = "CLUB_LOAD_FAIL";
 
 /***/ }),
 
@@ -1611,6 +1641,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _actions_clubs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../actions/clubs */ "./Mercury/frontend/src/actions/clubs.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1635,6 +1670,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
+
+
 var Clubs = /*#__PURE__*/function (_Component) {
   _inherits(Clubs, _Component);
 
@@ -1651,6 +1690,19 @@ var Clubs = /*#__PURE__*/function (_Component) {
 
     return _possibleConstructorReturn(_this, (_temp = _this = _super.call.apply(_super, [this].concat(args)), _this.state = {
       list: []
+    }, _this.enter = function (id) {
+      if (_this.props.isAuthenticated) {
+        if (_this.props.user.clubs.hasOwnProperty(id)) {
+          _this.props.clubEnter(id);
+
+          _this.props.history.push('/club');
+        } else {
+          console.log("Not a part of the club");
+        }
+      } else {
+        console.log("Login first");
+        alert("Not a part of the club");
+      }
     }, _temp));
   }
 
@@ -1670,21 +1722,40 @@ var Clubs = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "ACTIVE CLUBS:- ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      var _this3 = this;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["HashRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "ACTIVE CLUBS:- ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "list-group"
       }, this.state.list.map(function (club) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           key: club.id,
-          href: "/#/club",
-          className: "list-group-item list-group-item-action"
+          className: "list-group-item list-group-item-action",
+          onClick: function onClick() {
+            return _this3.enter(club.id);
+          }
         }, club.club_name);
-      }))));
+      })))));
     }
   }]);
 
   return Clubs;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-/* harmony default export */ __webpack_exports__["default"] = (Clubs);
+Clubs.propTypes = {
+  user: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  isAuthenticated: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+  clubEnter: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    isAuthenticated: state.auth.isAuthenticated,
+    user: state.auth.user
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, {
+  clubEnter: _actions_clubs__WEBPACK_IMPORTED_MODULE_4__["clubEnter"]
+})(Object(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["withRouter"])(Clubs)));
 
 /***/ }),
 
@@ -2260,7 +2331,8 @@ var initialState = {
   isAuthenticated: null,
   isLoading: false,
   user: null
-};
+}; //clubList is all the clubs the user is a part of...
+
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var actions = arguments.length > 1 ? arguments[1] : undefined;
@@ -2303,6 +2375,52 @@ var initialState = {
 
 /***/ }),
 
+/***/ "./Mercury/frontend/src/reducers/club.js":
+/*!***********************************************!*\
+  !*** ./Mercury/frontend/src/reducers/club.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./Mercury/frontend/src/actions/types.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var initialState = {
+  inClub: false,
+  club: null
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var actions = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (actions.type) {
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["CLUB_LOADED"]:
+      return _objectSpread({}, state, {
+        inClub: true,
+        club: actions.payload
+      });
+
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["CLUB_UNLOAD"]:
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["CLUB_LOAD_FAIL"]:
+      return _objectSpread({}, state, {
+        inClub: false,
+        club: null
+      });
+
+    default:
+      return _objectSpread({}, state);
+  }
+});
+
+/***/ }),
+
 /***/ "./Mercury/frontend/src/reducers/index.js":
 /*!************************************************!*\
   !*** ./Mercury/frontend/src/reducers/index.js ***!
@@ -2314,10 +2432,13 @@ var initialState = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth */ "./Mercury/frontend/src/reducers/auth.js");
+/* harmony import */ var _club__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./club */ "./Mercury/frontend/src/reducers/club.js");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  auth: _auth__WEBPACK_IMPORTED_MODULE_1__["default"]
+  auth: _auth__WEBPACK_IMPORTED_MODULE_1__["default"],
+  club: _club__WEBPACK_IMPORTED_MODULE_2__["default"]
 }));
 
 /***/ }),
@@ -9712,15 +9833,11 @@ Navigation.propTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-<<<<<<< HEAD
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Clubs\", function() { return Clubs; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _actions_clubs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../actions/clubs */ \"./Mercury/frontend/src/actions/clubs.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\n\n\n\n\n\n\nvar Clubs = /*#__PURE__*/function (_Component) {\n  _inherits(Clubs, _Component);\n\n  var _super = _createSuper(Clubs);\n\n  function Clubs() {\n    var _temp, _this;\n\n    _classCallCheck(this, Clubs);\n\n    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    return _possibleConstructorReturn(_this, (_temp = _this = _super.call.apply(_super, [this].concat(args)), _this.state = {\n      list: []\n    }, _this.enter = function (id) {\n      if (_this.props.isAuthenticated) {\n        if (_this.props.user.clubs.hasOwnProperty(id)) {\n          _this.props.clubEnter(id);\n\n          _this.props.history.push('/club');\n        } else {\n          console.log(\"Not a part of the club\");\n        }\n      } else {\n        console.log(\"Login first\");\n        alert(\"Not a part of the club\");\n      }\n    }, _temp));\n  }\n\n  _createClass(Clubs, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(\"./api/clubs\").then(function (res) {\n        var list = res.data;\n\n        _this2.setState({\n          list: list\n        });\n      });\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this3 = this;\n\n      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__[\"HashRouter\"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__[\"Fragment\"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h2\", null, \"ACTIVE CLUBS:- \")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"list-group\"\n      }, this.state.list.map(function (club) {\n        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"button\", {\n          key: club.id,\n          className: \"list-group-item list-group-item-action\",\n          onClick: function onClick() {\n            return _this3.enter(club.id);\n          }\n        }, club.club_name);\n      })))));\n    }\n  }]);\n\n  return Clubs;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]);\nClubs.propTypes = {\n  user: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,\n  isAuthenticated: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,\n  clubEnter: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func\n};\n\nvar mapStateToProps = function mapStateToProps(state) {\n  return {\n    isAuthenticated: state.auth.isAuthenticated,\n    user: state.auth.user\n  };\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__[\"connect\"])(mapStateToProps, {\n  clubEnter: _actions_clubs__WEBPACK_IMPORTED_MODULE_4__[\"clubEnter\"]\n})(Object(react_router_dom__WEBPACK_IMPORTED_MODULE_5__[\"withRouter\"])(Clubs)));\n\n//# sourceURL=webpack:///./Mercury/frontend/src/components/pages/Home/Clubs.js?");
-=======
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CenturyView; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _CenturyView_Decades__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CenturyView/Decades */ "./node_modules/react-calendar/dist/esm/CenturyView/Decades.js");
->>>>>>> 85a882e7a79fe88ffdf3cfa6ea58b2a4ee8c8b57
 
 
 function CenturyView(props) {
@@ -9825,22 +9942,6 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-<<<<<<< HEAD
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ \"./Mercury/frontend/src/actions/types.js\");\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\nvar initialState = {\n  token: localStorage.getItem(\"token\"),\n  isAuthenticated: null,\n  isLoading: false,\n  user: null\n}; //clubList is all the clubs the user is a part of...\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var actions = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (actions.type) {\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"USER_LOADING\"]:\n      return _objectSpread({}, state, {\n        isLoading: true\n      });\n\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"USER_LOADED\"]:\n      return _objectSpread({}, state, {\n        isLoading: false\n      });\n\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"LOGIN_SUCCESS\"]:\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"REGISTER_SUCCESS\"]:\n      localStorage.setItem(\"token\", actions.payload.token);\n      return _objectSpread({}, state, {\n        isAuthenticated: true,\n        isLoading: false,\n        user: actions.payload\n      });\n\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"LOGIN_FAIL\"]:\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"AUTH_ERROR\"]:\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"REGISTER_FAIL\"]:\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"LOGOUT_SUCCESS\"]:\n      return _objectSpread({}, state, {\n        isAuthenticated: false,\n        isLoading: false,\n        user: null,\n        token: null\n      });\n\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack:///./Mercury/frontend/src/reducers/auth.js?");
-
-/***/ }),
-
-/***/ "./Mercury/frontend/src/reducers/club.js":
-/*!***********************************************!*\
-  !*** ./Mercury/frontend/src/reducers/club.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ \"./Mercury/frontend/src/actions/types.js\");\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\nvar initialState = {\n  inClub: false,\n  club: null\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var actions = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (actions.type) {\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"CLUB_LOADED\"]:\n      return _objectSpread({}, state, {\n        inClub: true,\n        club: actions.payload\n      });\n\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"CLUB_UNLOAD\"]:\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"CLUB_LOAD_FAIL\"]:\n      return _objectSpread({}, state, {\n        inClub: false,\n        club: null\n      });\n\n    default:\n      return _objectSpread({}, state);\n  }\n});\n\n//# sourceURL=webpack:///./Mercury/frontend/src/reducers/club.js?");
-=======
 
 function Decades(props) {
   var activeStartDate = props.activeStartDate;
@@ -9857,7 +9958,6 @@ function Decades(props) {
   }));
 }
 Decades.propTypes = _objectSpread({}, _shared_propTypes__WEBPACK_IMPORTED_MODULE_5__["tileGroupProps"]);
->>>>>>> 85a882e7a79fe88ffdf3cfa6ea58b2a4ee8c8b57
 
 /***/ }),
 
@@ -9869,15 +9969,11 @@ Decades.propTypes = _objectSpread({}, _shared_propTypes__WEBPACK_IMPORTED_MODULE
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-<<<<<<< HEAD
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth */ \"./Mercury/frontend/src/reducers/auth.js\");\n/* harmony import */ var _club__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./club */ \"./Mercury/frontend/src/reducers/club.js\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  auth: _auth__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  club: _club__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n}));\n\n//# sourceURL=webpack:///./Mercury/frontend/src/reducers/index.js?");
-=======
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DecadeView; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _DecadeView_Years__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DecadeView/Years */ "./node_modules/react-calendar/dist/esm/DecadeView/Years.js");
->>>>>>> 85a882e7a79fe88ffdf3cfa6ea58b2a4ee8c8b57
 
 
 function DecadeView(props) {

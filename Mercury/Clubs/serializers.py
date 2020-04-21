@@ -9,12 +9,11 @@ class ClubSerializer(serializers.ModelSerializer):
         model = Club
         fields = '__all__'
 
-<<<<<<< HEAD
 
-=======
+
 class MembersSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = User
         fields = '__all__'
->>>>>>> 85a882e7a79fe88ffdf3cfa6ea58b2a4ee8c8b57
+

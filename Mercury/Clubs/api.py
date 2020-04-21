@@ -14,7 +14,7 @@ class ClubViewSet(viewsets.ModelViewSet):
 
 
 class NewClubViewSet(APIView):
-    def get(self, request):
+    def post(self, request):
         club = Club.objects.get(id=request.data['id'])
         serializer = ClubSerializer(club).data
         return Response(serializer)

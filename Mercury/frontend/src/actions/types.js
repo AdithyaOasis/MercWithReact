@@ -10,3 +10,5 @@ export const REGISTER_FAIL = "REGISTER_FAIL";
 export const CLUB_LOADED = "CLUB_LOADED";
 export const CLUB_UNLOAD = "CLUB_UNLOAD";
 export const CLUB_LOAD_FAIL = "CLUB_LOAD_FAIL";
+export const PROJECT_LOADED = "PROJECT_LOADED";
+export const PROJECT_UNLOAD = "PROJECT_UNLOAD";

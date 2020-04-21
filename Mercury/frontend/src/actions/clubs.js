@@ -3,24 +3,31 @@ import axios from "axios";
 import { CLUB_LOADED, CLUB_UNLOAD, CLUB_LOAD_FAIL } from "./types";
 
 export const clubEnter = (id) => (dispatch, getState) => {
-    const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-      const body = JSON.stringify({id})
-      console.log(body)
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  const body = JSON.stringify({ id });
+  console.log(body);
 
-      axios
-      .post("/api/clubs/club",body,config)
-      .then((res) => {
-          dispatch({
-              type: CLUB_LOADED,
-              payload: res.data
-          })
-      } 
-      )
-      .catch((err) => {
-          console.log(err)
-      })
+  axios
+    .post("/api/clubs/club", body, config)
+    .then((res) => {
+      dispatch({
+        type: CLUB_LOADED,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: CLUB_LOAD_FAIL,
+      });
+    });
+};
+
+export const clubExit = () => (dispatch) => {
+  dispatch({
+    type: CLUB_UNLOAD,
+  });
 };

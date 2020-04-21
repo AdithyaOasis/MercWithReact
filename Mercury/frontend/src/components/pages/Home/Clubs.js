@@ -31,37 +31,36 @@ export class Clubs extends Component {
     if (this.props.isAuthenticated) {
       if (this.props.user.clubs.hasOwnProperty(id)) {
         this.props.clubEnter(id);
-        this.props.history.push('/club')
-
+        this.props.history.push("/club");
       } else {
         console.log("Not a part of the club");
       }
     } else {
       console.log("Login first");
-      alert("Not a part of the club");
+      alert("Login First");
     }
   };
   render() {
     return (
       <Router>
-      <Fragment>
-        <div>
-          <h2>ACTIVE CLUBS:- </h2>
-        </div>
-        <div>
-          <div className="list-group">
-            {this.state.list.map((club) => (
-              <button
-                key={club.id}
-                className="list-group-item list-group-item-action"
-                onClick={() => this.enter(club.id)}
-              >
-                {club.club_name}
-              </button>
-            ))}
+        <Fragment>
+          <div>
+            <h2>ACTIVE CLUBS:- </h2>
           </div>
-        </div>
-      </Fragment>
+          <div>
+            <div className="list-group">
+              {this.state.list.map((club) => (
+                <button
+                  key={club.id}
+                  className="list-group-item list-group-item-action"
+                  onClick={() => this.enter(club.id)}
+                >
+                  {club.club_name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </Fragment>
       </Router>
     );
   }

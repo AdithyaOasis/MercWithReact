@@ -3,6 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 from .models import Club
 from Projects.models import Project
+
 '''
 def home(request,club_id):
 	The_Club = Club.objects.get(id=club_id)

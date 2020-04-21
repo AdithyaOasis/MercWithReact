@@ -43,9 +43,10 @@ INSTALLED_APPS = [
     'Accounts',
     'frontend',
     'rest_framework',
-    'knox'
-
+    'knox',
+    'Events',
 ]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -83,14 +84,13 @@ WSGI_APPLICATION = 'Mercury.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mercurywithreact',   # Make database Mercury
+        'NAME': 'mercury',   # Make database Mercury
         'USER': uSer,
         'PASSWORD': pword,  # Go to words.py to specify the password value
         'HOST': hOst,
         'PORT': pOrt,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

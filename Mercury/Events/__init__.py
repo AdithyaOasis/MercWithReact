@@ -1,0 +1,1 @@
+# used for both calendar and notifications component

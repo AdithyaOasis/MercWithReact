@@ -15,3 +15,5 @@ class Project(models.Model):
 
     def startedNow(self):
         return self.date_Started >= datetime.date.today()
+
+#class ProjectsMembers(models.Model)

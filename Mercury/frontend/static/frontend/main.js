@@ -1585,7 +1585,6 @@ var Members = /*#__PURE__*/function (_Component) {
     }
 
     return _possibleConstructorReturn(_this, (_temp = _this = _super.call.apply(_super, [this].concat(args)), _this.state = {
-      club_name: "club2",
       members: []
     }, _temp));
   }
@@ -1596,7 +1595,7 @@ var Members = /*#__PURE__*/function (_Component) {
       var _this2 = this;
 
       var body = JSON.stringify({
-        club_name: this.state.club_name
+        club_name: this.props.club_name
       });
       var config = {
         headers: {
@@ -1606,7 +1605,6 @@ var Members = /*#__PURE__*/function (_Component) {
       console.log("Making the request");
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("./api/clubs/members/member", body, config).then(function (res) {
         var members = res.data;
-        console.log(members);
 
         _this2.setState({
           members: members
@@ -1625,17 +1623,21 @@ var Members = /*#__PURE__*/function (_Component) {
       }, this.state.members.map(function (member) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           key: member.id.toString()
-        }, "Member : ", member.username, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "email: ", member.email);
+        }, "Member : ", member.member.username, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "email: ", member.member.email, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Positon: ", member.member_Type, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Date Joined: ", member.Date_Joined, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
       })));
     }
   }]);
 
   return Members;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]); // const mapStateToProps = (state) => ({
-//   club: state.club.club
-// })
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (Members);
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    club_name: state.club.club.club_name
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(Members));
 
 /***/ }),
 

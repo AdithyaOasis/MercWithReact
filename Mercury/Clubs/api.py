@@ -1,4 +1,3 @@
-
 from .serializers import ClubSerializer, MembersSerializer
 from rest_framework import viewsets, permissions
 from rest_framework.response import Response
@@ -21,7 +20,7 @@ class NewClubViewSet(APIView):
 
 class ClubMemberViewSet(APIView):
     def post(self, request):
-        members = Club.objects.get(club_name=request.data['club_name']).member.all()
+        members = filter(lambda mem: mem.club.club_name == request.data['club_name'] , Members.objects.all())
         serializer = MembersSerializer(members, many=True).data
         return Response(serializer)
 
@@ -31,4 +30,3 @@ class MembersViewSet(viewsets.ModelViewSet):
         permissions.AllowAny,
     ]
     serializer_class = MembersSerializer
-

@@ -9,8 +9,11 @@ class ClubSerializer(serializers.ModelSerializer):
         model = Club
         fields = '__all__'
 
+
+
 class MembersSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Members
         fields = '__all__'
+

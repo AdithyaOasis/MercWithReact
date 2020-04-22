@@ -19,12 +19,14 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 
+
 router.register('api/clubs/members', MembersViewSet, 'Clubs')
 router.register('api/clubs', ClubViewSet, 'Clubs')
 
 urlpatterns = [
     path("api/clubs/club", NewClubViewSet.as_view()),
     path("api/clubs/members/member", ClubMemberViewSet.as_view()),
+
 ]
 
 urlpatterns += router.urls

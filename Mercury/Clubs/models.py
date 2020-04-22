@@ -9,7 +9,7 @@ import datetime
 class Club(models.Model):
     club_name = models.CharField(max_length=100)  # Changed n to N
     member = models.ManyToManyField(User, through='Members')
-    projects = models.ManyToManyField(Project)
+    projects = models.ManyToManyField(Project, blank=True)
     date_Started = models.DateField(blank=True, null=True)
     reg_Link = models.CharField(max_length=200, blank=True)
     club_Link = models.CharField(max_length=200, blank=True)

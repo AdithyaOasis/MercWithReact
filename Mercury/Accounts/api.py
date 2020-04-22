@@ -3,6 +3,10 @@ from rest_framework.response import Response
 from knox.models import AuthToken
 from .serializers import UserSerializer, RegisterSerializer, LoginSerializer
 from knox.auth import TokenAuthentication
+from django.contrib.auth.models import User
+from Clubs.models import Club
+from Clubs.serializers import ClubSerializer
+import json
 # Register API
 
 
@@ -31,10 +35,17 @@ class LoginAPI(generics.GenericAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data
-
+        u = User.objects.get(username=user.username)
+        list = u.members_set.all()
+        #clubList = list(map(lambda item: item.club, list))
+        dict = {}
+        for i in list:
+            dict[i.club.id] = i.club.club_name
         return Response({
             "user": UserSerializer(user,
                                    context=self.get_serializer_context()).data,
+            "clubs": dict,
+
             "token": AuthToken.objects.create(user)[1]
 
         })

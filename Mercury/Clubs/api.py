@@ -2,7 +2,7 @@ from .serializers import ClubSerializer, MembersSerializer
 from rest_framework import viewsets, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from Clubs.models import Club
+from Clubs.models import Club, Members
 
 class ClubViewSet(viewsets.ModelViewSet):
     queryset = Club.objects.all()
@@ -24,7 +24,7 @@ class ClubMemberViewSet(APIView):
         return Response(serializer)
 
 class MembersViewSet(viewsets.ModelViewSet):
-    queryset = Club.objects.all()
+    queryset = Members.objects.all()
     permission_classes = [
         permissions.AllowAny,
     ]

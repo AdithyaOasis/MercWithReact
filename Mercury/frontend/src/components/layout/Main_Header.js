@@ -21,7 +21,7 @@ export class Main_Header extends Component {
   };
   render() {
     return (
-      <div>
+      <div style={{backgroundColor: "grey"}}>
         <span style={{ backgroundColor: "grey", width: "100%" }}>
           {this.props.isAuthenticated ? (
             <button className="btn btn-danger" onClick={this.props.logout}>
@@ -34,7 +34,7 @@ export class Main_Header extends Component {
           )}
         </span>
 
-        <div className="jumbotron text-center">
+        <div>
           <Router>
             <Switch>
               <Route path="/Home" component={Header_Home} />

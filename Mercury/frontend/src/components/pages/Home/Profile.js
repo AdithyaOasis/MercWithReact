@@ -6,7 +6,8 @@ export class Profile extends Component {
     if (!this.props.user) {
       return <h1>login first</h1>;
     }
-    const { username, id, email } = this.props.user;
+    const { username, id, email } = this.props.user.user;
+
     return (
       <div>
         {this.props.isAuthenticated ? (

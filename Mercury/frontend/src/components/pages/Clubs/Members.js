@@ -4,15 +4,13 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 export class Members extends Component {
-  //this.props.club.club_name
-
   state = {
-    club_name: this.props.club.club_name,
     members: [],
   };
 
   componentDidMount() {
-    const body = JSON.stringify({ club_name: this.state.club_name });
+    const body = JSON.stringify({ club_name: this.props.club_name });
+
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +21,6 @@ export class Members extends Component {
       .post("./api/clubs/members/member", body, config)
       .then((res) => {
         const members = res.data;
-        console.log(members);
         this.setState({ members });
       })
       .catch((err) => {
@@ -37,8 +34,10 @@ export class Members extends Component {
         <div className="list-group-item list-group-item-action">
           {this.state.members.map((member) => (
             <div key={member.id.toString()}>
-              Member : {member.username} <br />
-              email: {member.email}
+              Member : {member.member.username} <br />
+              email: {member.member.email} <br />
+              Positon: {member.member_Type} <br />
+              Date Joined: {member.Date_Joined} <br />
             </div>
           ))}
         </div>
@@ -48,7 +47,7 @@ export class Members extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  club: state.club.club,
+  club_name: state.club.club.club_name,
 });
 
 export default connect(mapStateToProps)(Members);

@@ -16,10 +16,12 @@ export class Projects extends Component {
     return (
       <Router>
         <div>Project</div>
-        <Route exact path="/project/Home" component={Home} />
-        <Route exact path="/project/Members" component={Members} />
-        <Route exact path="/project/Desc" component={Desc} />
-        <Route component={Error} />
+        <Switch>
+          <Route exact path="/projects/Home" component={Home} />
+          <Route exact path="/projects/Members" component={Members} />
+          <Route exact path="/projects/Description" component={Desc} />
+          <Route component={Error} />
+        </Switch>
       </Router>
     );
   }

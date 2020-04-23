@@ -16,9 +16,9 @@ export class Club extends Component {
         <div>
           Club
           <Switch>
-            <Route exact path="/club/Home" component={Home} />
-            <Route exact path="/club/Projects" component={Projects} />
-            <Route exact path="/club/Members" component={Members} />
+            <Route exact path="/clubs/Home" component={Home} />
+            <Route exact path="/clubs/Projects" component={Projects} />
+            <Route exact path="/clubs/Members" component={Members} />
             <Route component={Error} />
           </Switch>
         </div>

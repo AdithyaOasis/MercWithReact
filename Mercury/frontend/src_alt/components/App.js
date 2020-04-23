@@ -10,8 +10,8 @@ import { Provider } from "react-redux";
 import store from "../store.js";
 import AlertTemplate from "react-alert-template-basic";
 
-import Navbar from "./Navbar/Navbar";
-import Body from "./Body/Body";
+import NavbarComponent from "./Navbar/NavbarComponent";
+import BodyComponent from "./Body/BodyComponent.js";
 
 //import "./Styles.css";
 const alertOptions = {
@@ -23,12 +23,10 @@ export class App extends Component {
     return (
       <Provider store={store}>
         <div>
-          <div id="navbar">
-            <Navbar />
-          </div>
-
+          <div id="navbar"></div>
+          <NavbarComponent />
           <div id="body">
-            <Body />
+            <BodyComponent />
           </div>
         </div>
       </Provider>

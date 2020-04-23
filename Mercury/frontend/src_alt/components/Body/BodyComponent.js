@@ -13,7 +13,7 @@ import Project from "./projectsComponents/Project";
 //import Register from "./registerComponents/Register";
 import Error from "../BaseComponent/error/Error";
 
-export class Body extends Component {
+export class BodyComponent extends Component {
   render() {
     return (
       <Router>
@@ -21,8 +21,8 @@ export class Body extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/Home" component={Home} />
-            <Route path="/Project" component={Project} />
-            <Route path="/Club" component={Club} />
+            <Route path="/projects" component={Project} />
+            <Route path="/Clubs" component={Club} />
 
             <Route component={Error} />
           </Switch>
@@ -32,4 +32,4 @@ export class Body extends Component {
   }
 }
 
-export default Body;
+export default BodyComponent;

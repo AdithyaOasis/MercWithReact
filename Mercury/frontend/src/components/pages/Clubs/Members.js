@@ -10,7 +10,7 @@ export class Members extends Component {
 
   componentDidMount() {
     const body = JSON.stringify({ club_name: this.props.club_name });
-    
+
     const config = {
       headers: {
         "Content-Type": "application/json",

@@ -1,15 +1,18 @@
 import React, { Component, Fragment } from "react";
 import Todoapp from "../../todo/Todoapp";
+import { connect } from "react-redux";
 export class Home extends Component {
   render() {
+    if (!this.props.club) {
+      return <h2>Loading..</h2>;
+    }
     return (
       <Fragment>
-        <h1>Clubs</h1>
         <div className="container">
+          <h1></h1>
           <div className="row">
-            <div className="col-sm-4 border border-dark">
-              <Todoapp />
-            </div>
+            <div className="col-sm-4 border border-dark"></div>
+            <Todoapp />
           </div>
         </div>
       </Fragment>
@@ -17,4 +20,9 @@ export class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = (state) => ({
+  club: state.club.club,
+});
+
+export default connect(mapStateToProps)(Home);
+//export default Home;

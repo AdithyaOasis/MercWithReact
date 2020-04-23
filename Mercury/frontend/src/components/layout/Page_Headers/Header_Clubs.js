@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -16,53 +16,63 @@ export class Header_Clubs extends Component {
     this.props.history.push("/");
   };
   render() {
+    if (!this.props.club) {
+      return <Fragment></Fragment>;
+    }
     return (
       <Router>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
           <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">Mercury</a>
-                  </li>
-                  <li class="nav-item">
-                    <Link className="nav-link" to="/club">
-                      Home
-                    </Link>
-                  </li>
-                  <li class="nav-item">
-                    <Link className="nav-link" to="/club/Projects">
-                      Projects
-                    </Link>
-                  </li>
-                  <li class="nav-item">
-                  <Link className="nav-link" to="/club/Members">
-                      Members
-                    </Link>
-                  </li>
-              </ul>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Mercury</a>
+              </li>
+              <li class="nav-item">
+                <Link className="nav-link" to="/club">
+                  Home
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link className="nav-link" to="/club/Projects">
+                  Projects
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link className="nav-link" to="/club/Members">
+                  Members
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <h1>{this.props.club.club_name}</h1>
+            </div>
           </div>
           <div class="mx-auto order-0">
-    <a class="navbar-brand mx-auto" href="#">{this.props.club_name}</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
+            <a class="navbar-brand mx-auto" href="#">{this.props.club_name}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
           <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Right</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                  </li>
-              </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Right</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
           </div>
-      </nav>
+        </nav>
       </Router>
     );
   }
 }
 
-const mapStateToProps = (state) => ({club_name : state.club.inClub});
+const mapStateToProps = (state) => ({
+  club: state.club.club,
+});
 
 export default connect(mapStateToProps, { clubExit })(withRouter(Header_Clubs));

@@ -30,8 +30,9 @@ export class Clubs extends Component {
   enter = (id) => {
     if (this.props.isAuthenticated) {
       if (this.props.user.clubs.hasOwnProperty(id)) {
-        this.props.clubEnter(id);
-        this.props.history.push("/club");
+        if (this.props.clubEnter(id)) {
+          this.props.history.push("/club");
+        }
       } else {
         console.log("Not a part of the club");
       }

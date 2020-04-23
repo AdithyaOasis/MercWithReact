@@ -12,20 +12,28 @@ import {
 import Header_Clubs from "./Page_Headers/Header_Clubs";
 import Header_Home from "./Page_Headers/Header_Home";
 import Header_Projects from "./Page_Headers/Header_Projects";
-
+import { logout } from "../../actions/auth";
 export class Main_Header extends Component {
   static propTypes = {
     isAuthenticated: PropTypes.bool,
     user: PropTypes.object,
+    logout: PropTypes.func,
   };
   render() {
     return (
       <div>
         <span style={{ backgroundColor: "grey", width: "100%" }}>
-          <a className="btn btn-primary " href="/#/login">
-            Login
-          </a>
+          {this.props.isAuthenticated ? (
+            <button className="btn btn-danger" onClick={this.props.logout}>
+              Logout
+            </button>
+          ) : (
+            <a className="btn btn-primary " href="/#/login">
+              Login
+            </a>
+          )}
         </span>
+
         <div className="jumbotron text-center">
           <Router>
             <Switch>
@@ -46,4 +54,4 @@ const mapStateToProps = (state) => ({
   username: state.auth.user,
 });
 
-export default connect(mapStateToProps)(Main_Header);
+export default connect(mapStateToProps, { logout })(Main_Header);

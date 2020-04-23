@@ -1,8 +1,14 @@
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
+export const LOGOUT_FAIL = "LOGOUT_FAIL";
 export const LOGIN_FAIL = "LOGIN_FAIL";
 export const USER_LOADING = "USER_LOADING";
 export const USER_LOADED = "USER_LOADED";
 export const AUTH_ERROR = "AUTH_ERROR";
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 export const REGISTER_FAIL = "REGISTER_FAIL";
+export const CLUB_LOADED = "CLUB_LOADED";
+export const CLUB_UNLOAD = "CLUB_UNLOAD";
+export const CLUB_LOAD_FAIL = "CLUB_LOAD_FAIL";
+export const PROJECT_LOADED = "PROJECT_LOADED";
+export const PROJECT_UNLOAD = "PROJECT_UNLOAD";

@@ -1,6 +1,21 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { projectExit } from "../../../actions/projects";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+
+import {
+  HashRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+  withRouter,
+} from "react-router-dom";
 export class Header_Projects extends Component {
+  back = () => {
+    this.props.projectExit();
+    this.props.history.push("/club");
+  };
   render() {
     return (
       <div>
@@ -22,10 +37,17 @@ export class Header_Projects extends Component {
               Members
             </Link>
           </nav>
+          <button className="btn btn-primary" onClick={this.back}>
+            Club
+          </button>
         </div>
       </div>
     );
   }
 }
 
-export default Header_Projects;
+const mapStateToProps = (state) => ({});
+
+export default connect(mapStateToProps, { projectExit })(
+  withRouter(Header_Projects)
+);

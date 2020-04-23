@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from Mercury.words import hOst, temPlates, uSer, pword, pOrt
+from Mercury.words import hOst, uSer, pword, pOrt, servR
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -43,9 +43,10 @@ INSTALLED_APPS = [
     'Accounts',
     'frontend',
     'rest_framework',
-    'knox'
-
+    'knox',
+    'Events',
 ]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -83,14 +84,13 @@ WSGI_APPLICATION = 'Mercury.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mercurywithreact',   # Make database Mercury
+        'NAME': servR,   # Make database Mercury
         'USER': uSer,
         'PASSWORD': pword,  # Go to words.py to specify the password value
         'HOST': hOst,
         'PORT': pOrt,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

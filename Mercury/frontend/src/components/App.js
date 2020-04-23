@@ -33,9 +33,8 @@ export class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <Main_Header />
-
           <Fragment>
+            <Main_Header />
             <Switch>
               <Route exact path="/" component={H_Home} />
               <Route exact path="/Home" component={H_Home} />
@@ -50,7 +49,6 @@ export class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
             </Switch>
-            what about now?
           </Fragment>
         </Router>
       </Provider>

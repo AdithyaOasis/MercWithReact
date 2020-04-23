@@ -1611,10 +1611,6 @@ var Members = /*#__PURE__*/function (_Component) {
     }
 
     return _possibleConstructorReturn(_this, (_temp = _this = _super.call.apply(_super, [this].concat(args)), _this.state = {
-<<<<<<< HEAD
-      club_name: _this.props.club.club_name,
-=======
->>>>>>> c0d6409b34b24671ddc8eebf8781678c62d69800
       members: []
     }, _temp));
   }
@@ -1663,11 +1659,7 @@ var Members = /*#__PURE__*/function (_Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-<<<<<<< HEAD
-    club: state.club.club
-=======
     club_name: state.club.club.club_name
->>>>>>> c0d6409b34b24671ddc8eebf8781678c62d69800
   };
 };
 
@@ -2053,7 +2045,7 @@ var Profile = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       if (!this.props.user) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Loading..");
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "login first");
       }
 
       var _this$props$user = this.props.user,
@@ -2073,7 +2065,7 @@ var Profile = /*#__PURE__*/function (_Component) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    user: state.auth.user.user,
+    user: state.auth.user,
     isAuthenticated: state.auth.isAuthenticated
   };
 };

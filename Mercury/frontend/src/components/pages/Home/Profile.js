@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
+
 export class Profile extends Component {
   render() {
     if (!this.props.user) {
-      return <h3>Loading..</h3>;
+      return <h1>login first</h1>;
     }
     const { username, id, email } = this.props.user;
     return (
@@ -28,7 +29,7 @@ export class Profile extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  user: state.auth.user.user,
+  user: state.auth.user,
   isAuthenticated: state.auth.isAuthenticated,
 });
 

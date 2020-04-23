@@ -14,34 +14,38 @@ import NavbarGeneric from "./peripherals/NavbarGeneric";
 export class NavbarComponent extends Component {
   render() {
     return (
-      <div>
-        
-        <h1>NavbarComponent</h1>
-        
-        <NavbarGeneric />
-        
-        <Switch>
-        
-          <Route exact path="/" component={NavbarHome} />
-          <Route exact path="/Home" component={NavbarHome} />
-          <Route exact path="/Home/Clubs" component={NavbarHome} />
-          <Route exact path="/Home/Profile" component={NavbarHome} />
+      <Router>
+        <div>
+          <h1>NavbarComponent</h1>
 
-          <Route exact path="/Clubs" component={NavbarClubs} />
-          <Route exact path="/Clubs/Home" component={NavbarClubs} />
-          <Route exact path="/Clubs/Projects" component={NavbarClubs} />
-          <Route exact path="/Clubs/Members" component={NavbarClubs} />
+          <NavbarGeneric />
 
-          <Route exact path="/Projects" component={NavbarProjects} />
-          <Route exact path="/Projects/Home" component={NavbarProjects} />
-          <Route exact path="/Projects/Description" component={NavbarProjects} />
-          <Route exact path="/Projects/Members" component={NavbarProjects} />
+          <Switch>
+            <Route exact path="/" component={NavbarHome} />
+            <Route exact path="/Home" component={NavbarHome} />
+            <Route exact path="/Home/Home" component={NavbarHome} />
+            <Route exact path="/Home/Clubs" component={NavbarHome} />
+            <Route exact path="/Home/Profile" component={NavbarHome} />
 
-          <Route exact path="/Login" component={NavbarLogin} />
-          <Route exact path="/Register" component={NavbarLogin} />
+            <Route exact path="/Clubs" component={NavbarClubs} />
+            <Route exact path="/Clubs/Home" component={NavbarClubs} />
+            <Route exact path="/Clubs/Projects" component={NavbarClubs} />
+            <Route exact path="/Clubs/Members" component={NavbarClubs} />
 
-        </Switch>
-      </div>
+            <Route exact path="/Projects" component={NavbarProjects} />
+            <Route exact path="/Projects/Home" component={NavbarProjects} />
+            <Route
+              exact
+              path="/Projects/Description"
+              component={NavbarProjects}
+            />
+            <Route exact path="/Projects/Members" component={NavbarProjects} />
+
+            <Route exact path="/Login" component={NavbarLogin} />
+            <Route exact path="/Register" component={NavbarLogin} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

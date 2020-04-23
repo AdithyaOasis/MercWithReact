@@ -23,12 +23,10 @@ export class App extends Component {
     return (
       <Provider store={store}>
         <div>
-          <div id="navbar">
-            <Navbar />
-          </div>
-
+          <div id="navbar"></div>
+          <NavbarComponent />
           <div id="body">
-            <Body />
+            <BodyComponent />
           </div>
         </div>
       </Provider>

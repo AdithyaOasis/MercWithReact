@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -16,11 +16,14 @@ export class Header_Clubs extends Component {
     this.props.history.push("/");
   };
   render() {
+    if (!this.props.club) {
+      return <Fragment></Fragment>;
+    }
     return (
       <Router>
         <div>
           <div>
-            <h1>CLUB</h1>
+            <h1>{this.props.club.club_name}</h1>
           </div>
           <div className="container">
             <nav className="navbar navbar-expand-lg ">
@@ -46,6 +49,8 @@ export class Header_Clubs extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+  club: state.club.club,
+});
 
 export default connect(mapStateToProps, { clubExit })(withRouter(Header_Clubs));

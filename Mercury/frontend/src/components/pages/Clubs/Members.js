@@ -7,44 +7,48 @@ export class Members extends Component {
   //this.props.club.club_name
 
   state = {
-    club_name: "club2",
+    club_name: this.props.club.club_name,
     members: [],
   };
 
   componentDidMount() {
     const body = JSON.stringify({ club_name: this.state.club_name });
     const config = {
-      
       headers: {
         "Content-Type": "application/json",
       },
     };
     console.log("Making the request");
-    axios.post("./api/clubs/members/member", body, config).then((res) => {
-      const members = res.data;
-      console.log(members);
-      this.setState({ members });
-    }).catch((err) => {console.log("Promise failed!!", err)});
+    axios
+      .post("./api/clubs/members/member", body, config)
+      .then((res) => {
+        const members = res.data;
+        console.log(members);
+        this.setState({ members });
+      })
+      .catch((err) => {
+        console.log("Promise failed!!", err);
+      });
   }
 
   render() {
     return (
-        <div className="list-group">
-          <div className="list-group-item list-group-item-action">
-            {this.state.members.map((member) => (
-              <div key={member.id.toString()}>
-                Member : {member.username} <br />
-                email: {member.email}
-              </div>
-            ))}
-          </div>
+      <div className="list-group">
+        <div className="list-group-item list-group-item-action">
+          {this.state.members.map((member) => (
+            <div key={member.id.toString()}>
+              Member : {member.username} <br />
+              email: {member.email}
+            </div>
+          ))}
         </div>
+      </div>
     );
   }
 }
 
-// const mapStateToProps = (state) => ({
-//   club: state.club.club
-// })
+const mapStateToProps = (state) => ({
+  club: state.club.club,
+});
 
-export default Members;
+export default connect(mapStateToProps)(Members);

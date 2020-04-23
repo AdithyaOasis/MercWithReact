@@ -17,10 +17,13 @@ export class Header_Projects extends Component {
     this.props.history.push("/club");
   };
   render() {
+    if (!this.props.project) {
+      return <Fragment></Fragment>;
+    }
     return (
       <div>
         <div>
-          <h1>PROJECT</h1>
+          <h1>{this.props.project.project_Name}</h1>
         </div>
 
         <div className="container">
@@ -46,7 +49,9 @@ export class Header_Projects extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+  project: state.project.project,
+});
 
 export default connect(mapStateToProps, { projectExit })(
   withRouter(Header_Projects)

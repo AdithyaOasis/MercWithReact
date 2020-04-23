@@ -1,6 +1,6 @@
 # MercWithReact
 Mercury with react, ill start using branch for the main one later
-<h1 Mercury</h1>
+
 <br>
 Project for Club management and Project management for colleges<br>
 make sure to run npm install<br>

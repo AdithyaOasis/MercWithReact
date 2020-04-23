@@ -10,8 +10,8 @@ import { Provider } from "react-redux";
 import store from "../store.js";
 import AlertTemplate from "react-alert-template-basic";
 
-import Navbar from "./Navbar/Navbar";
-import Body from "./Body/Body";
+import NavbarComponent from "./Navbar/NavbarComponent";
+import BodyComponent from "./Body/BodyComponent.js";
 
 //import "./Styles.css";
 const alertOptions = {

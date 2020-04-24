@@ -8,7 +8,7 @@ import {
 import Home from "./peripherals/Home";
 import Members from "./peripherals/Members";
 import Projects from "./peripherals/Projects";
-import Error from "../../BaseComponent/errorComponent/Error";
+import Error from "../../BaseComponents/errorComponent/Error";
 export class Club extends Component {
   render() {
     return (

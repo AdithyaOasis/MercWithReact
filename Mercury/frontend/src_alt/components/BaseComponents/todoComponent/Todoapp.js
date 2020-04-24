@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Todos from "./peripherals/Todos";
-import AddTodo from ".peripherals/AddTodo";
+import AddTodo from "./peripherals/AddTodo.js";
 
 class TodoApp extends Component {
   state = {

@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import Todoapp from "../../../BaseComponents/todo/Todoapp";
+import Todoapp from "../../../BaseComponents/todoComponent/Todoapp";
 import { connect } from "react-redux";
 export class Home extends Component {
   render() {

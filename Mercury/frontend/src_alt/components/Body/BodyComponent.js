@@ -11,7 +11,7 @@ import Home from "./homeComponents/Home";
 import Login from "./loginComponents/Login";
 import Project from "./projectsComponents/Project";
 import Register from "./registerComponents/Register";
-import Error from "../BaseComponent/error/Error";
+import Error from "../BaseComponents/errorComponent/Error";
 
 export class BodyComponent extends Component {
   render() {

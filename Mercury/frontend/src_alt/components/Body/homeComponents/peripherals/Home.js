@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-import Calendar from "../../../BaseComponents/calendar/Calendar";
-import Notifications from "../../../BaseComponents/notifications/Notifications";
+import Calendar from "../../../BaseComponents/calendarComponent/Calendar";
+import Notifications from "../../../BaseComponents/notificationsComponent/Notifications";
 
 export class Home extends Component {
   render() {

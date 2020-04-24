@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development --watch ./Mercury/frontend/src/index.js --output ./Mercury/frontend/static/frontend/main.js",
+    "src_alt": "webpack --mode development --watch ./Mercury/frontend/src_alt/index.js --output ./Mercury/frontend/static/frontend/main.js",
     "build": "webpack --mode production ./Mercury/frontend/src/index.js --output ./Mercury/frontend/static/frontend/main.js"
   },
   "author": "",

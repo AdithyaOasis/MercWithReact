@@ -34,15 +34,13 @@ export class NavbarComponent extends Component {
 
             <Route exact path="/Projects" component={NavbarProjects} />
             <Route exact path="/Projects/Home" component={NavbarProjects} />
-            <Route
-              exact
-              path="/Projects/Description"
-              component={NavbarProjects}
-            />
+            <Route exact path="/Projects/Description" component={NavbarProjects} />
             <Route exact path="/Projects/Members" component={NavbarProjects} />
 
             <Route exact path="/Login" component={NavbarLogin} />
             <Route exact path="/Register" component={NavbarLogin} />
+
+            <Route component={Error} />
           </Switch>
         </div>
       </Router>

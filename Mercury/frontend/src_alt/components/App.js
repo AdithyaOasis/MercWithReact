@@ -24,11 +24,10 @@ export class App extends Component {
       <Provider store={store}>
         <div>
           <NavbarComponent />
-          {/* <BodyComponent /> */}
+          <BodyComponent />
         </div>
       </Provider>
     );
-
   }
 }
 

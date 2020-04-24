@@ -17,7 +17,7 @@ export class Projects extends Component {
   };
   Enter = (Project) => {
     this.props.projectEnter(Project);
-    this.props.history.push("/project");
+    this.props.history.push("/projects/home");
   };
 
   componentDidMount() {
@@ -34,6 +34,9 @@ export class Projects extends Component {
   }
 
   render() {
+    if (!this.props.club) {
+      return <h1>Not in club</h1>;
+    }
     return (
       <Router>
         <Fragment>

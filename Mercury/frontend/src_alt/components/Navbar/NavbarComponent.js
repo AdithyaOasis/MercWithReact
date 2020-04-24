@@ -3,6 +3,7 @@ import NavbarHome from "./peripherals/NavbarHome";
 import NavbarClubs from "./peripherals/NavbarClubs";
 import NavbarLogin from "./peripherals/NavbarLogin";
 import NavbarProjects from "./peripherals/NavbarProjects";
+import Error from "../BaseComponents/errorComponent/Error";
 import {
   HashRouter as Router,
   Route,
@@ -34,7 +35,11 @@ export class NavbarComponent extends Component {
 
             <Route exact path="/Projects" component={NavbarProjects} />
             <Route exact path="/Projects/Home" component={NavbarProjects} />
-            <Route exact path="/Projects/Description" component={NavbarProjects} />
+            <Route
+              exact
+              path="/Projects/Description"
+              component={NavbarProjects}
+            />
             <Route exact path="/Projects/Members" component={NavbarProjects} />
 
             <Route exact path="/Login" component={NavbarLogin} />

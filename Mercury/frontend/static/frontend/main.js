@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./Mercury/frontend/src_alt/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./Mercury/frontend/src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./Mercury/frontend/src_alt/actions/auth.js":
-/*!**************************************************!*\
-  !*** ./Mercury/frontend/src_alt/actions/auth.js ***!
-  \**************************************************/
+/***/ "./Mercury/frontend/src/actions/auth.js":
+/*!**********************************************!*\
+  !*** ./Mercury/frontend/src/actions/auth.js ***!
+  \**********************************************/
 /*! exports provided: tokenConfig, loaduser, login, register, logout */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./Mercury/frontend/src_alt/actions/types.js");
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./Mercury/frontend/src/actions/types.js");
 
  //just a function we are using
 
@@ -211,10 +211,10 @@ var logout = function logout() {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/actions/clubs.js":
-/*!***************************************************!*\
-  !*** ./Mercury/frontend/src_alt/actions/clubs.js ***!
-  \***************************************************/
+/***/ "./Mercury/frontend/src/actions/clubs.js":
+/*!***********************************************!*\
+  !*** ./Mercury/frontend/src/actions/clubs.js ***!
+  \***********************************************/
 /*! exports provided: clubEnter, clubExit */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -224,7 +224,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clubExit", function() { return clubExit; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./Mercury/frontend/src_alt/actions/types.js");
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./Mercury/frontend/src/actions/types.js");
  //import { tokenConfig } from "./auth"; to be used for more secure
 
 
@@ -262,10 +262,10 @@ var clubExit = function clubExit() {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/actions/projects.js":
-/*!******************************************************!*\
-  !*** ./Mercury/frontend/src_alt/actions/projects.js ***!
-  \******************************************************/
+/***/ "./Mercury/frontend/src/actions/projects.js":
+/*!**************************************************!*\
+  !*** ./Mercury/frontend/src/actions/projects.js ***!
+  \**************************************************/
 /*! exports provided: projectEnter, projectExit */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -275,7 +275,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "projectExit", function() { return projectExit; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./Mercury/frontend/src_alt/actions/types.js");
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./Mercury/frontend/src/actions/types.js");
  //import { tokenConfig } from "./auth"; to be used for more secure
 
 
@@ -297,10 +297,10 @@ var projectExit = function projectExit() {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/actions/types.js":
-/*!***************************************************!*\
-  !*** ./Mercury/frontend/src_alt/actions/types.js ***!
-  \***************************************************/
+/***/ "./Mercury/frontend/src/actions/types.js":
+/*!***********************************************!*\
+  !*** ./Mercury/frontend/src/actions/types.js ***!
+  \***********************************************/
 /*! exports provided: LOGIN_SUCCESS, LOGOUT_SUCCESS, LOGOUT_FAIL, LOGIN_FAIL, USER_LOADING, USER_LOADED, AUTH_ERROR, REGISTER_SUCCESS, REGISTER_FAIL, CLUB_LOADED, CLUB_UNLOAD, CLUB_LOAD_FAIL, PROJECT_LOADED, PROJECT_UNLOAD */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -337,10 +337,10 @@ var PROJECT_UNLOAD = "PROJECT_UNLOAD";
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/App.js":
-/*!****************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/App.js ***!
-  \****************************************************/
+/***/ "./Mercury/frontend/src/components/App.js":
+/*!************************************************!*\
+  !*** ./Mercury/frontend/src/components/App.js ***!
+  \************************************************/
 /*! exports provided: App */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -353,10 +353,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _store_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store.js */ "./Mercury/frontend/src_alt/store.js");
+/* harmony import */ var _store_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store.js */ "./Mercury/frontend/src/store.js");
 /* harmony import */ var react_alert_template_basic__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-alert-template-basic */ "./node_modules/react-alert-template-basic/dist/esm/react-alert-template-basic.js");
-/* harmony import */ var _Navbar_NavbarComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Navbar/NavbarComponent */ "./Mercury/frontend/src_alt/components/Navbar/NavbarComponent.js");
-/* harmony import */ var _Body_BodyComponent_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Body/BodyComponent.js */ "./Mercury/frontend/src_alt/components/Body/BodyComponent.js");
+/* harmony import */ var _Navbar_NavbarComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Navbar/NavbarComponent */ "./Mercury/frontend/src/components/Navbar/NavbarComponent.js");
+/* harmony import */ var _Body_BodyComponent_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Body/BodyComponent.js */ "./Mercury/frontend/src/components/Body/BodyComponent.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -408,7 +408,7 @@ var App = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__["Provider"], {
         store: _store_js__WEBPACK_IMPORTED_MODULE_4__["default"]
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar_NavbarComponent__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar_NavbarComponent__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Body_BodyComponent_js__WEBPACK_IMPORTED_MODULE_7__["default"], null)));
     }
   }]);
 
@@ -418,10 +418,10 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/BaseComponents/calendarComponent/Calendar.js":
-/*!******************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/BaseComponents/calendarComponent/Calendar.js ***!
-  \******************************************************************************************/
+/***/ "./Mercury/frontend/src/components/BaseComponents/calendarComponent/Calendar.js":
+/*!**************************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/BaseComponents/calendarComponent/Calendar.js ***!
+  \**************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -511,10 +511,10 @@ var MyApp = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/BaseComponents/errorComponent/Error.js":
-/*!************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/BaseComponents/errorComponent/Error.js ***!
-  \************************************************************************************/
+/***/ "./Mercury/frontend/src/components/BaseComponents/errorComponent/Error.js":
+/*!********************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/BaseComponents/errorComponent/Error.js ***!
+  \********************************************************************************/
 /*! exports provided: Error, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -570,10 +570,10 @@ var Error = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/BaseComponents/notificationsComponent/Notifications.js":
-/*!****************************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/BaseComponents/notificationsComponent/Notifications.js ***!
-  \****************************************************************************************************/
+/***/ "./Mercury/frontend/src/components/BaseComponents/notificationsComponent/Notifications.js":
+/*!************************************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/BaseComponents/notificationsComponent/Notifications.js ***!
+  \************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -680,10 +680,10 @@ var Notifications = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/BaseComponents/todoComponent/Todoapp.js":
-/*!*************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/BaseComponents/todoComponent/Todoapp.js ***!
-  \*************************************************************************************/
+/***/ "./Mercury/frontend/src/components/BaseComponents/todoComponent/Todoapp.js":
+/*!*********************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/BaseComponents/todoComponent/Todoapp.js ***!
+  \*********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -691,8 +691,8 @@ var Notifications = /*#__PURE__*/function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _peripherals_Todos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./peripherals/Todos */ "./Mercury/frontend/src_alt/components/BaseComponents/todoComponent/peripherals/Todos.js");
-/* harmony import */ var _peripherals_AddTodo_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./peripherals/AddTodo.js */ "./Mercury/frontend/src_alt/components/BaseComponents/todoComponent/peripherals/AddTodo.js");
+/* harmony import */ var _peripherals_Todos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./peripherals/Todos */ "./Mercury/frontend/src/components/BaseComponents/todoComponent/peripherals/Todos.js");
+/* harmony import */ var _peripherals_AddTodo_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./peripherals/AddTodo.js */ "./Mercury/frontend/src/components/BaseComponents/todoComponent/peripherals/AddTodo.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -794,10 +794,10 @@ var TodoApp = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/BaseComponents/todoComponent/peripherals/AddTodo.js":
-/*!*************************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/BaseComponents/todoComponent/peripherals/AddTodo.js ***!
-  \*************************************************************************************************/
+/***/ "./Mercury/frontend/src/components/BaseComponents/todoComponent/peripherals/AddTodo.js":
+/*!*********************************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/BaseComponents/todoComponent/peripherals/AddTodo.js ***!
+  \*********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -880,10 +880,10 @@ var AddTodo = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/BaseComponents/todoComponent/peripherals/Todos.js":
-/*!***********************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/BaseComponents/todoComponent/peripherals/Todos.js ***!
-  \***********************************************************************************************/
+/***/ "./Mercury/frontend/src/components/BaseComponents/todoComponent/peripherals/Todos.js":
+/*!*******************************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/BaseComponents/todoComponent/peripherals/Todos.js ***!
+  \*******************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -917,10 +917,10 @@ var Todos = function Todos(_ref) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/BodyComponent.js":
-/*!*******************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/BodyComponent.js ***!
-  \*******************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/BodyComponent.js":
+/*!***************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/BodyComponent.js ***!
+  \***************************************************************/
 /*! exports provided: BodyComponent, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -930,12 +930,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _clubsComponents_Club__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./clubsComponents/Club */ "./Mercury/frontend/src_alt/components/Body/clubsComponents/Club.js");
-/* harmony import */ var _homeComponents_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./homeComponents/Home */ "./Mercury/frontend/src_alt/components/Body/homeComponents/Home.js");
-/* harmony import */ var _loginComponents_Login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./loginComponents/Login */ "./Mercury/frontend/src_alt/components/Body/loginComponents/Login.js");
-/* harmony import */ var _projectsComponents_Project__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./projectsComponents/Project */ "./Mercury/frontend/src_alt/components/Body/projectsComponents/Project.js");
-/* harmony import */ var _registerComponents_Register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./registerComponents/Register */ "./Mercury/frontend/src_alt/components/Body/registerComponents/Register.js");
-/* harmony import */ var _BaseComponents_errorComponent_Error__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../BaseComponents/errorComponent/Error */ "./Mercury/frontend/src_alt/components/BaseComponents/errorComponent/Error.js");
+/* harmony import */ var _clubsComponents_Club__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./clubsComponents/Club */ "./Mercury/frontend/src/components/Body/clubsComponents/Club.js");
+/* harmony import */ var _homeComponents_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./homeComponents/Home */ "./Mercury/frontend/src/components/Body/homeComponents/Home.js");
+/* harmony import */ var _loginComponents_Login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./loginComponents/Login */ "./Mercury/frontend/src/components/Body/loginComponents/Login.js");
+/* harmony import */ var _projectsComponents_Project__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./projectsComponents/Project */ "./Mercury/frontend/src/components/Body/projectsComponents/Project.js");
+/* harmony import */ var _registerComponents_Register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./registerComponents/Register */ "./Mercury/frontend/src/components/Body/registerComponents/Register.js");
+/* harmony import */ var _BaseComponents_errorComponent_Error__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../BaseComponents/errorComponent/Error */ "./Mercury/frontend/src/components/BaseComponents/errorComponent/Error.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1011,10 +1011,10 @@ var BodyComponent = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/clubsComponents/Club.js":
-/*!**************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/clubsComponents/Club.js ***!
-  \**************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/clubsComponents/Club.js":
+/*!**********************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/clubsComponents/Club.js ***!
+  \**********************************************************************/
 /*! exports provided: Club, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1024,10 +1024,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _peripherals_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./peripherals/Home */ "./Mercury/frontend/src_alt/components/Body/clubsComponents/peripherals/Home.js");
-/* harmony import */ var _peripherals_Members__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./peripherals/Members */ "./Mercury/frontend/src_alt/components/Body/clubsComponents/peripherals/Members.js");
-/* harmony import */ var _peripherals_Projects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./peripherals/Projects */ "./Mercury/frontend/src_alt/components/Body/clubsComponents/peripherals/Projects.js");
-/* harmony import */ var _BaseComponents_errorComponent_Error__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../BaseComponents/errorComponent/Error */ "./Mercury/frontend/src_alt/components/BaseComponents/errorComponent/Error.js");
+/* harmony import */ var _peripherals_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./peripherals/Home */ "./Mercury/frontend/src/components/Body/clubsComponents/peripherals/Home.js");
+/* harmony import */ var _peripherals_Members__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./peripherals/Members */ "./Mercury/frontend/src/components/Body/clubsComponents/peripherals/Members.js");
+/* harmony import */ var _peripherals_Projects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./peripherals/Projects */ "./Mercury/frontend/src/components/Body/clubsComponents/peripherals/Projects.js");
+/* harmony import */ var _BaseComponents_errorComponent_Error__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../BaseComponents/errorComponent/Error */ "./Mercury/frontend/src/components/BaseComponents/errorComponent/Error.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1094,10 +1094,10 @@ var Club = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/clubsComponents/peripherals/Home.js":
-/*!**************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/clubsComponents/peripherals/Home.js ***!
-  \**************************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/clubsComponents/peripherals/Home.js":
+/*!**********************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/clubsComponents/peripherals/Home.js ***!
+  \**********************************************************************************/
 /*! exports provided: Home, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1106,7 +1106,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Home", function() { return Home; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _BaseComponents_todoComponent_Todoapp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../BaseComponents/todoComponent/Todoapp */ "./Mercury/frontend/src_alt/components/BaseComponents/todoComponent/Todoapp.js");
+/* harmony import */ var _BaseComponents_todoComponent_Todoapp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../BaseComponents/todoComponent/Todoapp */ "./Mercury/frontend/src/components/BaseComponents/todoComponent/Todoapp.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1174,10 +1174,10 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/clubsComponents/peripherals/Members.js":
-/*!*****************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/clubsComponents/peripherals/Members.js ***!
-  \*****************************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/clubsComponents/peripherals/Members.js":
+/*!*************************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/clubsComponents/peripherals/Members.js ***!
+  \*************************************************************************************/
 /*! exports provided: Members, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1290,10 +1290,10 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/clubsComponents/peripherals/Projects.js":
-/*!******************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/clubsComponents/peripherals/Projects.js ***!
-  \******************************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/clubsComponents/peripherals/Projects.js":
+/*!**************************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/clubsComponents/peripherals/Projects.js ***!
+  \**************************************************************************************/
 /*! exports provided: Projects, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1307,7 +1307,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _actions_projects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../actions/projects */ "./Mercury/frontend/src_alt/actions/projects.js");
+/* harmony import */ var _actions_projects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../actions/projects */ "./Mercury/frontend/src/actions/projects.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1356,7 +1356,7 @@ var Projects = /*#__PURE__*/function (_Component) {
     }, _this.Enter = function (Project) {
       _this.props.projectEnter(Project);
 
-      _this.props.history.push("/project");
+      _this.props.history.push("/projects/home");
     }, _temp));
   }
 
@@ -1385,6 +1385,10 @@ var Projects = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var _this3 = this;
+
+      if (!this.props.club) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Not in club");
+      }
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["HashRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Projects:-"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "list-group"
@@ -1415,10 +1419,10 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/homeComponents/Home.js":
-/*!*************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/homeComponents/Home.js ***!
-  \*************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/homeComponents/Home.js":
+/*!*********************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/homeComponents/Home.js ***!
+  \*********************************************************************/
 /*! exports provided: Home, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1428,10 +1432,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _peripherals_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./peripherals/Home */ "./Mercury/frontend/src_alt/components/Body/homeComponents/peripherals/Home.js");
-/* harmony import */ var _peripherals_Clubs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./peripherals/Clubs */ "./Mercury/frontend/src_alt/components/Body/homeComponents/peripherals/Clubs.js");
-/* harmony import */ var _peripherals_Profile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./peripherals/Profile */ "./Mercury/frontend/src_alt/components/Body/homeComponents/peripherals/Profile.js");
-/* harmony import */ var _BaseComponents_errorComponent_Error__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../BaseComponents/errorComponent/Error */ "./Mercury/frontend/src_alt/components/BaseComponents/errorComponent/Error.js");
+/* harmony import */ var _peripherals_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./peripherals/Home */ "./Mercury/frontend/src/components/Body/homeComponents/peripherals/Home.js");
+/* harmony import */ var _peripherals_Clubs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./peripherals/Clubs */ "./Mercury/frontend/src/components/Body/homeComponents/peripherals/Clubs.js");
+/* harmony import */ var _peripherals_Profile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./peripherals/Profile */ "./Mercury/frontend/src/components/Body/homeComponents/peripherals/Profile.js");
+/* harmony import */ var _BaseComponents_errorComponent_Error__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../BaseComponents/errorComponent/Error */ "./Mercury/frontend/src/components/BaseComponents/errorComponent/Error.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1506,10 +1510,10 @@ var Home = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/homeComponents/peripherals/Clubs.js":
-/*!**************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/homeComponents/peripherals/Clubs.js ***!
-  \**************************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/homeComponents/peripherals/Clubs.js":
+/*!**********************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/homeComponents/peripherals/Clubs.js ***!
+  \**********************************************************************************/
 /*! exports provided: Clubs, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1523,7 +1527,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _actions_clubs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../actions/clubs */ "./Mercury/frontend/src_alt/actions/clubs.js");
+/* harmony import */ var _actions_clubs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../actions/clubs */ "./Mercury/frontend/src/actions/clubs.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1638,10 +1642,10 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/homeComponents/peripherals/Home.js":
-/*!*************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/homeComponents/peripherals/Home.js ***!
-  \*************************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/homeComponents/peripherals/Home.js":
+/*!*********************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/homeComponents/peripherals/Home.js ***!
+  \*********************************************************************************/
 /*! exports provided: Home, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1650,8 +1654,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Home", function() { return Home; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _BaseComponents_calendarComponent_Calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../BaseComponents/calendarComponent/Calendar */ "./Mercury/frontend/src_alt/components/BaseComponents/calendarComponent/Calendar.js");
-/* harmony import */ var _BaseComponents_notificationsComponent_Notifications__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../BaseComponents/notificationsComponent/Notifications */ "./Mercury/frontend/src_alt/components/BaseComponents/notificationsComponent/Notifications.js");
+/* harmony import */ var _BaseComponents_calendarComponent_Calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../BaseComponents/calendarComponent/Calendar */ "./Mercury/frontend/src/components/BaseComponents/calendarComponent/Calendar.js");
+/* harmony import */ var _BaseComponents_notificationsComponent_Notifications__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../BaseComponents/notificationsComponent/Notifications */ "./Mercury/frontend/src/components/BaseComponents/notificationsComponent/Notifications.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1709,10 +1713,10 @@ var Home = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/homeComponents/peripherals/Profile.js":
-/*!****************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/homeComponents/peripherals/Profile.js ***!
-  \****************************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/homeComponents/peripherals/Profile.js":
+/*!************************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/homeComponents/peripherals/Profile.js ***!
+  \************************************************************************************/
 /*! exports provided: Profile, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1790,10 +1794,10 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/loginComponents/Login.js":
-/*!***************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/loginComponents/Login.js ***!
-  \***************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/loginComponents/Login.js":
+/*!***********************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/loginComponents/Login.js ***!
+  \***********************************************************************/
 /*! exports provided: Login, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1806,7 +1810,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../actions/auth */ "./Mercury/frontend/src_alt/actions/auth.js");
+/* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../actions/auth */ "./Mercury/frontend/src/actions/auth.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1929,10 +1933,10 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/projectsComponents/Project.js":
-/*!********************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/projectsComponents/Project.js ***!
-  \********************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/projectsComponents/Project.js":
+/*!****************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/projectsComponents/Project.js ***!
+  \****************************************************************************/
 /*! exports provided: Projects, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1942,10 +1946,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _peripherals_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./peripherals/Home */ "./Mercury/frontend/src_alt/components/Body/projectsComponents/peripherals/Home.js");
-/* harmony import */ var _peripherals_Members__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./peripherals/Members */ "./Mercury/frontend/src_alt/components/Body/projectsComponents/peripherals/Members.js");
-/* harmony import */ var _peripherals_Description__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./peripherals/Description */ "./Mercury/frontend/src_alt/components/Body/projectsComponents/peripherals/Description.js");
-/* harmony import */ var _BaseComponents_errorComponent_Error__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../BaseComponents/errorComponent/Error */ "./Mercury/frontend/src_alt/components/BaseComponents/errorComponent/Error.js");
+/* harmony import */ var _peripherals_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./peripherals/Home */ "./Mercury/frontend/src/components/Body/projectsComponents/peripherals/Home.js");
+/* harmony import */ var _peripherals_Members__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./peripherals/Members */ "./Mercury/frontend/src/components/Body/projectsComponents/peripherals/Members.js");
+/* harmony import */ var _peripherals_Description__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./peripherals/Description */ "./Mercury/frontend/src/components/Body/projectsComponents/peripherals/Description.js");
+/* harmony import */ var _BaseComponents_errorComponent_Error__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../BaseComponents/errorComponent/Error */ "./Mercury/frontend/src/components/BaseComponents/errorComponent/Error.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2012,10 +2016,10 @@ var Projects = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/projectsComponents/peripherals/Description.js":
-/*!************************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/projectsComponents/peripherals/Description.js ***!
-  \************************************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/projectsComponents/peripherals/Description.js":
+/*!********************************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/projectsComponents/peripherals/Description.js ***!
+  \********************************************************************************************/
 /*! exports provided: Description, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2071,10 +2075,10 @@ var Description = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/projectsComponents/peripherals/Home.js":
-/*!*****************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/projectsComponents/peripherals/Home.js ***!
-  \*****************************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/projectsComponents/peripherals/Home.js":
+/*!*************************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/projectsComponents/peripherals/Home.js ***!
+  \*************************************************************************************/
 /*! exports provided: Home, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2139,10 +2143,10 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/projectsComponents/peripherals/Members.js":
-/*!********************************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/projectsComponents/peripherals/Members.js ***!
-  \********************************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/projectsComponents/peripherals/Members.js":
+/*!****************************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/projectsComponents/peripherals/Members.js ***!
+  \****************************************************************************************/
 /*! exports provided: Members, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2198,10 +2202,10 @@ var Members = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Body/registerComponents/Register.js":
-/*!*********************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Body/registerComponents/Register.js ***!
-  \*********************************************************************************/
+/***/ "./Mercury/frontend/src/components/Body/registerComponents/Register.js":
+/*!*****************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Body/registerComponents/Register.js ***!
+  \*****************************************************************************/
 /*! exports provided: Register, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2214,7 +2218,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../actions/auth */ "./Mercury/frontend/src_alt/actions/auth.js");
+/* harmony import */ var _actions_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../actions/auth */ "./Mercury/frontend/src/actions/auth.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -2371,10 +2375,10 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Navbar/NavbarComponent.js":
-/*!***********************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Navbar/NavbarComponent.js ***!
-  \***********************************************************************/
+/***/ "./Mercury/frontend/src/components/Navbar/NavbarComponent.js":
+/*!*******************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Navbar/NavbarComponent.js ***!
+  \*******************************************************************/
 /*! exports provided: NavbarComponent, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2383,12 +2387,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavbarComponent", function() { return NavbarComponent; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _peripherals_NavbarHome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./peripherals/NavbarHome */ "./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarHome.js");
-/* harmony import */ var _peripherals_NavbarClubs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./peripherals/NavbarClubs */ "./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarClubs.js");
-/* harmony import */ var _peripherals_NavbarLogin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./peripherals/NavbarLogin */ "./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarLogin.js");
-/* harmony import */ var _peripherals_NavbarProjects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./peripherals/NavbarProjects */ "./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarProjects.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _peripherals_NavbarGeneric__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./peripherals/NavbarGeneric */ "./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarGeneric.js");
+/* harmony import */ var _peripherals_NavbarHome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./peripherals/NavbarHome */ "./Mercury/frontend/src/components/Navbar/peripherals/NavbarHome.js");
+/* harmony import */ var _peripherals_NavbarClubs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./peripherals/NavbarClubs */ "./Mercury/frontend/src/components/Navbar/peripherals/NavbarClubs.js");
+/* harmony import */ var _peripherals_NavbarLogin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./peripherals/NavbarLogin */ "./Mercury/frontend/src/components/Navbar/peripherals/NavbarLogin.js");
+/* harmony import */ var _peripherals_NavbarProjects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./peripherals/NavbarProjects */ "./Mercury/frontend/src/components/Navbar/peripherals/NavbarProjects.js");
+/* harmony import */ var _BaseComponents_errorComponent_Error__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../BaseComponents/errorComponent/Error */ "./Mercury/frontend/src/components/BaseComponents/errorComponent/Error.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _peripherals_NavbarGeneric__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./peripherals/NavbarGeneric */ "./Mercury/frontend/src/components/Navbar/peripherals/NavbarGeneric.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2418,6 +2423,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var NavbarComponent = /*#__PURE__*/function (_Component) {
   _inherits(NavbarComponent, _Component);
 
@@ -2432,68 +2438,68 @@ var NavbarComponent = /*#__PURE__*/function (_Component) {
   _createClass(NavbarComponent, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["HashRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "NavbarComponent"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_peripherals_NavbarGeneric__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["HashRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "NavbarComponent"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_peripherals_NavbarGeneric__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/",
         component: _peripherals_NavbarHome__WEBPACK_IMPORTED_MODULE_1__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Home",
         component: _peripherals_NavbarHome__WEBPACK_IMPORTED_MODULE_1__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Home/Home",
         component: _peripherals_NavbarHome__WEBPACK_IMPORTED_MODULE_1__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Home/Clubs",
         component: _peripherals_NavbarHome__WEBPACK_IMPORTED_MODULE_1__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Home/Profile",
         component: _peripherals_NavbarHome__WEBPACK_IMPORTED_MODULE_1__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Clubs",
         component: _peripherals_NavbarClubs__WEBPACK_IMPORTED_MODULE_2__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Clubs/Home",
         component: _peripherals_NavbarClubs__WEBPACK_IMPORTED_MODULE_2__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Clubs/Projects",
         component: _peripherals_NavbarClubs__WEBPACK_IMPORTED_MODULE_2__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Clubs/Members",
         component: _peripherals_NavbarClubs__WEBPACK_IMPORTED_MODULE_2__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Projects",
         component: _peripherals_NavbarProjects__WEBPACK_IMPORTED_MODULE_4__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Projects/Home",
         component: _peripherals_NavbarProjects__WEBPACK_IMPORTED_MODULE_4__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Projects/Description",
         component: _peripherals_NavbarProjects__WEBPACK_IMPORTED_MODULE_4__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Projects/Members",
         component: _peripherals_NavbarProjects__WEBPACK_IMPORTED_MODULE_4__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Login",
         component: _peripherals_NavbarLogin__WEBPACK_IMPORTED_MODULE_3__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         exact: true,
         path: "/Register",
         component: _peripherals_NavbarLogin__WEBPACK_IMPORTED_MODULE_3__["default"]
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
-        component: Error
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
+        component: _BaseComponents_errorComponent_Error__WEBPACK_IMPORTED_MODULE_5__["default"]
       }))));
     }
   }]);
@@ -2504,10 +2510,10 @@ var NavbarComponent = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarClubs.js":
-/*!*******************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarClubs.js ***!
-  \*******************************************************************************/
+/***/ "./Mercury/frontend/src/components/Navbar/peripherals/NavbarClubs.js":
+/*!***************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Navbar/peripherals/NavbarClubs.js ***!
+  \***************************************************************************/
 /*! exports provided: NavbarClubs, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2563,10 +2569,10 @@ var NavbarClubs = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarGeneric.js":
-/*!*********************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarGeneric.js ***!
-  \*********************************************************************************/
+/***/ "./Mercury/frontend/src/components/Navbar/peripherals/NavbarGeneric.js":
+/*!*****************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Navbar/peripherals/NavbarGeneric.js ***!
+  \*****************************************************************************/
 /*! exports provided: NavbarGeneric, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2622,10 +2628,10 @@ var NavbarGeneric = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarHome.js":
-/*!******************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarHome.js ***!
-  \******************************************************************************/
+/***/ "./Mercury/frontend/src/components/Navbar/peripherals/NavbarHome.js":
+/*!**************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Navbar/peripherals/NavbarHome.js ***!
+  \**************************************************************************/
 /*! exports provided: NavbarHome, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2681,10 +2687,10 @@ var NavbarHome = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarLogin.js":
-/*!*******************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarLogin.js ***!
-  \*******************************************************************************/
+/***/ "./Mercury/frontend/src/components/Navbar/peripherals/NavbarLogin.js":
+/*!***************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Navbar/peripherals/NavbarLogin.js ***!
+  \***************************************************************************/
 /*! exports provided: NavbarLogin, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2740,10 +2746,10 @@ var NavbarLogin = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarProjects.js":
-/*!**********************************************************************************!*\
-  !*** ./Mercury/frontend/src_alt/components/Navbar/peripherals/NavbarProjects.js ***!
-  \**********************************************************************************/
+/***/ "./Mercury/frontend/src/components/Navbar/peripherals/NavbarProjects.js":
+/*!******************************************************************************!*\
+  !*** ./Mercury/frontend/src/components/Navbar/peripherals/NavbarProjects.js ***!
+  \******************************************************************************/
 /*! exports provided: NavbarProjects, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2799,30 +2805,30 @@ var NavbarProjects = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/index.js":
-/*!*******************************************!*\
-  !*** ./Mercury/frontend/src_alt/index.js ***!
-  \*******************************************/
+/***/ "./Mercury/frontend/src/index.js":
+/*!***************************************!*\
+  !*** ./Mercury/frontend/src/index.js ***!
+  \***************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/App */ "./Mercury/frontend/src_alt/components/App.js");
+/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/App */ "./Mercury/frontend/src/components/App.js");
 
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/reducers/auth.js":
-/*!***************************************************!*\
-  !*** ./Mercury/frontend/src_alt/reducers/auth.js ***!
-  \***************************************************/
+/***/ "./Mercury/frontend/src/reducers/auth.js":
+/*!***********************************************!*\
+  !*** ./Mercury/frontend/src/reducers/auth.js ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./Mercury/frontend/src_alt/actions/types.js");
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./Mercury/frontend/src/actions/types.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2879,16 +2885,16 @@ var initialState = {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/reducers/club.js":
-/*!***************************************************!*\
-  !*** ./Mercury/frontend/src_alt/reducers/club.js ***!
-  \***************************************************/
+/***/ "./Mercury/frontend/src/reducers/club.js":
+/*!***********************************************!*\
+  !*** ./Mercury/frontend/src/reducers/club.js ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./Mercury/frontend/src_alt/actions/types.js");
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./Mercury/frontend/src/actions/types.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2925,19 +2931,19 @@ var initialState = {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/reducers/index.js":
-/*!****************************************************!*\
-  !*** ./Mercury/frontend/src_alt/reducers/index.js ***!
-  \****************************************************/
+/***/ "./Mercury/frontend/src/reducers/index.js":
+/*!************************************************!*\
+  !*** ./Mercury/frontend/src/reducers/index.js ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth */ "./Mercury/frontend/src_alt/reducers/auth.js");
-/* harmony import */ var _club__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./club */ "./Mercury/frontend/src_alt/reducers/club.js");
-/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./project */ "./Mercury/frontend/src_alt/reducers/project.js");
+/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth */ "./Mercury/frontend/src/reducers/auth.js");
+/* harmony import */ var _club__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./club */ "./Mercury/frontend/src/reducers/club.js");
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./project */ "./Mercury/frontend/src/reducers/project.js");
 
 
 
@@ -2950,16 +2956,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/reducers/project.js":
-/*!******************************************************!*\
-  !*** ./Mercury/frontend/src_alt/reducers/project.js ***!
-  \******************************************************/
+/***/ "./Mercury/frontend/src/reducers/project.js":
+/*!**************************************************!*\
+  !*** ./Mercury/frontend/src/reducers/project.js ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./Mercury/frontend/src_alt/actions/types.js");
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./Mercury/frontend/src/actions/types.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2995,10 +3001,10 @@ var initialState = {
 
 /***/ }),
 
-/***/ "./Mercury/frontend/src_alt/store.js":
-/*!*******************************************!*\
-  !*** ./Mercury/frontend/src_alt/store.js ***!
-  \*******************************************/
+/***/ "./Mercury/frontend/src/store.js":
+/*!***************************************!*\
+  !*** ./Mercury/frontend/src/store.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3008,7 +3014,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-devtools-extension */ "./node_modules/redux-devtools-extension/index.js");
 /* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
-/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reducers */ "./Mercury/frontend/src_alt/reducers/index.js");
+/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reducers */ "./Mercury/frontend/src/reducers/index.js");
 
 
 

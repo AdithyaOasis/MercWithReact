@@ -3,9 +3,10 @@ from .api import ProjectViewSet, ClubProjectViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register('api/projects', ProjectViewSet, 'Projects')
 urlpatterns = [
-    path("api/projects/project",ClubProjectViewSet.as_view())
+    path("api/projects/project", ClubProjectViewSet.as_view()),
+    path("api/projects", ProjectViewSet.as_view())
+
 ]
 
 urlpatterns += router.urls

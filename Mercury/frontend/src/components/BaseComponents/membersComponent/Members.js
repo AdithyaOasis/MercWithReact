@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -45,12 +45,9 @@ export class Members extends Component {
     );
   }
 }
-/*
- */
 
 const mapStateToProps = (state) => ({
   club_name: state.club.club.club_name,
 });
 
 export default connect(mapStateToProps)(Members);
-//export default Members;

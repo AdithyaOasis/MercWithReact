@@ -13,7 +13,7 @@ class Club(models.Model):
     date_Started = models.DateField(blank=True, null=True)
     reg_Link = models.CharField(max_length=200, blank=True)
     club_Link = models.CharField(max_length=200, blank=True)
-
+    description = models.CharField(max_length = 500,blank = True)
     def __str__(self):
         return self.club_name
 

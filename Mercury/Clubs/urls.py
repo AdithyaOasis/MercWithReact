@@ -14,17 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path, include
-from .api import ClubViewSet, MembersViewSet, NewClubViewSet, ClubMemberViewSet
+from .api import ClubListViewSet, MembersViewSet, ClubViewSet, ClubMemberViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
 
 
 router.register('api/clubs/members', MembersViewSet, 'Clubs')
-router.register('api/clubs', ClubViewSet, 'Clubs')
+router.register('api/clubs', ClubListViewSet, 'Clubs')
 
 urlpatterns = [
-    path("api/clubs/club", NewClubViewSet.as_view()),
+    path("api/clubs/club", ClubViewSet.as_view()),
     path("api/clubs/members/member", ClubMemberViewSet.as_view()),
 
 ]

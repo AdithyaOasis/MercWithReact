@@ -13,14 +13,15 @@ import {
 } from "react-router-dom";
 export class Projects extends Component {
   state = {
-    projects: [],
+    list: [],
   };
-  Enter = (Project) => {
-    this.props.projectEnter(Project);
+  Enter = (id) => {
+    this.props.projectEnter(id);
     this.props.history.push("/projects/home");
   };
 
   componentDidMount() {
+    //gets the list of all the project in the club
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -28,8 +29,8 @@ export class Projects extends Component {
     };
     const body = JSON.stringify({ id: this.props.club.id });
     axios.post("./api/projects/project", body, config).then((res) => {
-      const projects = res.data;
-      this.setState({ projects });
+      const list = res.data;
+      this.setState({ list });
     });
   }
 
@@ -43,13 +44,13 @@ export class Projects extends Component {
           <h2>Projects:-</h2>
           <div>
             <div className="list-group">
-              {this.state.projects.map((project) => (
+              {this.state.list.map((item) => (
                 <button
-                  key={project.id}
+                  key={item.id}
                   className="list-group-item list-group-item-action"
-                  onClick={() => this.Enter(project)}
+                  onClick={() => this.Enter(item.id)}
                 >
-                  {project.project_Name}
+                  {item.project_Name}
                 </button>
               ))}
             </div>

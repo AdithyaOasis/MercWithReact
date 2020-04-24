@@ -10,7 +10,6 @@ export class Profile extends Component {
 
     return (
       <div>
-        Profile
         <div>
           {this.props.isAuthenticated ? (
             <div id="user-profile">

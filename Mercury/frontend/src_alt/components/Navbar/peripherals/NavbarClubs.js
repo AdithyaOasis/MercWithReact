@@ -1,10 +1,20 @@
 import React, { Component } from "react";
+import NavbarGeneric from "./NavbarGeneric";
 
 export class NavbarClubs extends Component {
   render() {
     return (
       <div>
-        <h1>NavbarClubs</h1>
+        <NavbarGeneric
+          link1Name="Home"
+          link1="/clubs/home"
+          link2Name="Projects"
+          link2="/clubs/projects"
+          link3Name="Members"
+          link3="/clubs/members"
+          centralLink="/clubs"
+          centralLinkName="CLUB_NAME"
+        />
       </div>
     );
   }

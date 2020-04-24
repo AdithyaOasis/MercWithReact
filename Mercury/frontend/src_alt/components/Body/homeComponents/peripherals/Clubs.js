@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-//import { clubEnter } from "../../../actions/clubs";
+import { clubEnter } from "../../../../actions/clubs";
 import {
   HashRouter as Router,
   Route,
@@ -11,7 +11,7 @@ import {
   withRouter,
 } from "react-router-dom";
 export class Clubs extends Component {
-  /* state = {
+  state = {
     list: [],
   };
 
@@ -31,7 +31,7 @@ export class Clubs extends Component {
     if (this.props.isAuthenticated) {
       if (this.props.user.clubs.hasOwnProperty(id)) {
         if (this.props.clubEnter(id)) {
-          this.props.history.push("/club");
+          this.props.history.push("/clubs/home");
         }
       } else {
         console.log("Not a part of the club");
@@ -40,7 +40,7 @@ export class Clubs extends Component {
       console.log("Login first");
       alert("Login First");
     }
-  };*/
+  };
   render() {
     return (
       <Router>
@@ -49,14 +49,8 @@ export class Clubs extends Component {
             <h2>ACTIVE CLUBS:- </h2>
           </div>
           <div>
-            <div className="list-group">Here</div>
-          </div>
-        </Fragment>
-      </Router>
-    );
-  }
-}
-/*{this.state.list.map((club) => (
+            <div className="list-group">
+              {this.state.list.map((club) => (
                 <button
                   key={club.id}
                   className="list-group-item list-group-item-action"
@@ -65,11 +59,19 @@ export class Clubs extends Component {
                   {club.club_name}
                 </button>
               ))}
+            </div>
+          </div>
+        </Fragment>
+      </Router>
+    );
+  }
+}
+
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
   user: state.auth.user,
 });
 
 export default connect(mapStateToProps, { clubEnter })(withRouter(Clubs));
-*/
-export default Clubs;
+
+//export default Clubs;

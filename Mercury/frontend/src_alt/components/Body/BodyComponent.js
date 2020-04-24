@@ -6,11 +6,11 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import Club from "./clubsComponets/Club";
+import Club from "./clubsComponents/Club";
 import Home from "./homeComponents/Home";
-//import Login from "./loginComponents/Login";
+import Login from "./loginComponents/Login";
 import Project from "./projectsComponents/Project";
-//import Register from "./registerComponents/Register";
+import Register from "./registerComponents/Register";
 import Error from "../BaseComponent/error/Error";
 
 export class BodyComponent extends Component {
@@ -23,6 +23,8 @@ export class BodyComponent extends Component {
             <Route path="/Home" component={Home} />
             <Route path="/projects" component={Project} />
             <Route path="/Clubs" component={Club} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
 
             <Route component={Error} />
           </Switch>

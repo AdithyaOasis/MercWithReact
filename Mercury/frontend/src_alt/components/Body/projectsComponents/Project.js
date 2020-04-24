@@ -9,7 +9,7 @@ import {
 import Home from "./peripherals/Home";
 import Members from "./peripherals/Members";
 import Desc from "./peripherals/Description";
-import Error from "../../BaseComponent/error/Error";
+import Error from "../../BaseComponent/errorComponent/Error";
 
 export class Projects extends Component {
   render() {

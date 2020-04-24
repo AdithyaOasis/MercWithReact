@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-//import Calendar from "../../calendar/Calendar";
-//import Notifications from "../../notifications/Notifications";
+import Calendar from "../../../BaseComponents/calendar/Calendar";
+import Notifications from "../../../BaseComponents/notifications/Notifications";
 
 export class Home extends Component {
   render() {
@@ -10,12 +10,12 @@ export class Home extends Component {
         <div className="container">
           <div className="col-sm 6">
             <h1> Events for next 7 days </h1>
-            Notifications here
+            <Notifications />
           </div>
           <hr />
           <div className="col-sm-6">
             <h1>Calendar of important events </h1>
-            Calender Here
+            <Calendar />
           </div>
         </div>
       </Fragment>
@@ -23,7 +23,7 @@ export class Home extends Component {
   }
 }
 
-// <Notifications />
-// <Calendar />
+//
+//
 
 export default Home;

@@ -9,7 +9,7 @@ import {
 import Homepage from "./peripherals/Home";
 import Clubs from "./peripherals/Clubs";
 import Profile from "./peripherals/Profile";
-import Error from "../../BaseComponent/error/Error";
+import Error from "../../BaseComponents/errorComponent/Error";
 export class Home extends Component {
   render() {
     return (

@@ -12,23 +12,31 @@ import {
 } from "react-router-dom";
 
 export class ProjectClubList extends Component {
-  state = {
-    list: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      list: [],
+      type: this.props.type,
+      list: this.props.list,
+    };
+  }
 
   static propTypes = {
     user: PropTypes.object,
     isAuthenticated: PropTypes.bool,
     clubEnter: PropTypes.func,
+    list: PropTypes.list,
+
   };
   componentDidMount() {
     //Gets details of all the clubs
-    axios.get("./api/clubs").then((res) => {
+    //given as props with list from home/clubs
+  /*  axios.get("./api/clubs").then((res) => {
       const list = res.data;
       this.setState({ list });
     });
-  }
-  enter = (id) => {
+  }*/
+  enterClub = (id) => {
     if (this.props.isAuthenticated) {
       if (this.props.user.clubs.hasOwnProperty(id)) {
         if (this.props.clubEnter(id)) {
@@ -42,8 +50,34 @@ export class ProjectClubList extends Component {
       alert("Login First");
     }
   };
+  enterProject = (id) => {
+    this.props.projectEnter(id);
+    this.props.history.push("/projects/home");
+  };
   render() {
-    return (
+    if(project){
+      return(
+        <Router>
+        <Fragment>
+          <h2>Projects:-</h2>
+          <div>
+            <div className="list-group">
+              {this.state.list.map((item) => (
+                <button
+                  key={item.id}
+                  className="list-group-item list-group-item-action"
+                  onClick={() => this.Enter(item.id)}
+                >
+                  {item.project_Name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </Fragment>
+      </Router>
+      )
+    }
+    else return (
       <div>
         <div>
           <div className="list-group">
@@ -51,7 +85,8 @@ export class ProjectClubList extends Component {
               <button
                 key={item.id}
                 className="list-group-item list-group-item-action"
-                onClick={() => this.enter(item.id)}
+                onClick={() => this.enterClub(item.id)}
+                {/*what will render  */}
               >
                 {club.club_name}
               </button>

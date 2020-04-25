@@ -1,28 +1,50 @@
 import React, { Component, Fragment } from "react";
-
+import axios from "axios";
 import ClubList from "../../../BaseComponents/projectClubListComponent/ProjectClubList";
-import {
-  HashRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-  withRouter,
-} from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+
 export class Clubs extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      list: [],
+      recieved: false,
+    };
+  }
+  static propTypes = {
+    user: PropTypes.object.isRequired,
+  };
+
+  componentDidMount() {
+    //Gets details of all the clubs
+    //given as props with list from home/clubs
+    axios.get("/api/clubs").then((res) => {
+      const list = res.data;
+      this.setState({ list });
+      this.setState({ recieved: true });
+    });
+  }
   render() {
     return (
-      <Router>
-        <Fragment>
-          <div>
-            <h2>ACTIVE CLUBS:- </h2>
-          </div>
-          <div>
-            <ClubList />
-          </div>
-        </Fragment>
-      </Router>
+      <Fragment>
+        <div>
+          <h2>ACTIVE CLUBS:- </h2>
+        </div>
+        <div>
+          <ClubList
+            type="clubList"
+            list={this.state.list}
+            user={this.props.user}
+          />
+        </div>
+      </Fragment>
     );
   }
 }
 
-export default Clubs;
+const mapStateToProps = (state) => ({
+  user: state.auth.user,
+});
+
+export default connect(mapStateToProps)(Clubs);

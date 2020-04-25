@@ -24,7 +24,6 @@ export const clubEnter = (id) => (dispatch, getState) => {
         type: CLUB_LOAD_FAIL,
       });
     });
-  return true;
 };
 
 export const clubExit = () => (dispatch) => {

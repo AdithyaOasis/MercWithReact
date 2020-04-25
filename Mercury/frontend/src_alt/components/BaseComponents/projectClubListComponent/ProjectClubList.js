@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { clubEnter } from "../../../actions/clubs";
+import { projectEnter } from "../../../actions/projects";
 import {
   HashRouter as Router,
   Route,
@@ -12,52 +12,67 @@ import {
 } from "react-router-dom";
 
 export class ProjectClubList extends Component {
-  state = {
-    list: [],
-  };
+  constructor(props) {
+    super(props);
+  }
 
   static propTypes = {
     user: PropTypes.object,
-    isAuthenticated: PropTypes.bool,
+    list: PropTypes.array.isRequired,
+    type: PropTypes.string.isRequired,
     clubEnter: PropTypes.func,
   };
-  componentDidMount() {
-    axios.get("./api/clubs").then((res) => {
-      const list = res.data;
-      this.setState({ list });
-    });
-  }
-  enter = (id) => {
-    if (this.props.isAuthenticated) {
-      if (this.props.user.clubs.hasOwnProperty(id)) {
-        if (this.props.clubEnter(id)) {
+
+  Enter = (id) => {
+    //if logged in
+    if (this.props.user) {
+      //if it is clublist
+      if (this.props.type == "clubList") {
+        //if user present in the club
+        if (this.props.user.clubs.hasOwnProperty(id)) {
+          this.props.clubEnter(id);
           this.props.history.push("/clubs/home");
+        } else {
+          console.log("Not a part of the club");
         }
-      } else {
-        console.log("Not a part of the club");
+        //if it is project list
+      } else if (this.props.type == "projectList") {
+        //if user present in the project
+        if (this.props.user.projects.hasOwnProperty(id)) {
+          this.props.projectEnter(id);
+          this.props.history.push("/projects/home");
+        } else {
+          console.log("Not a part of the project");
+        }
       }
     } else {
       console.log("Login first");
       alert("Login First");
     }
   };
+  componentDidMount() {}
   render() {
     return (
-      <div>
+      <Router>
         <div>
-          <div className="list-group">
-            {this.state.list.map((club) => (
-              <button
-                key={club.id}
-                className="list-group-item list-group-item-action"
-                onClick={() => this.enter(club.id)}
-              >
-                {club.club_name}
-              </button>
-            ))}
+          <h2>list</h2>
+          <div>
+            <div className="list-group">
+              {this.props.list.map((item) => (
+                <button
+                  key={item.id}
+                  className="list-group-item list-group-item-action"
+                  onClick={() => this.Enter(item.id)}
+                >
+                  {this.props.type === "projectList"
+                    ? item.project_Name
+                    : item.club_name}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
@@ -66,6 +81,6 @@ const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
   user: state.auth.user,
 });
-export default connect(mapStateToProps, { clubEnter })(
+export default connect(mapStateToProps, { clubEnter, projectEnter })(
   withRouter(ProjectClubList)
 );

@@ -7,12 +7,12 @@ export class NavbarProjects extends Component {
       <div>
         <NavbarGeneric
           link1Name="Home"
-          link1="/project"
+          link1="/projects"
           link2Name="Desciption"
-          link2="/project/description"
+          link2="/projects/description"
           link3Name="Members"
-          link3="/project/members"
-          centralLink="/project"
+          link3="/projects/members"
+          centralLink="/projects"
           centralLinkName="PROJECT_NAME"
         />
       </div>

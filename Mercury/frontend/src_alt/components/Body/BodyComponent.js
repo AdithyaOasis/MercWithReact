@@ -21,7 +21,7 @@ export class BodyComponent extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/Home" component={Home} />
-            <Route path="/project" component={Project} />
+            <Route path="/projects" component={Project} />
             <Route path="/Clubs" component={Club} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />

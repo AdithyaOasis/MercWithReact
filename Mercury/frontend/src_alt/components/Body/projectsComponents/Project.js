@@ -17,10 +17,10 @@ export class Projects extends Component {
       <Router>
         <div>Project</div>
         <Switch>
-          <Route exact path="/project" component={Home} />
-          <Route exact path="/project/Home" component={Home} />
-          <Route exact path="/project/Members" component={Members} />
-          <Route exact path="/project/Description" component={Desc} />
+          <Route exact path="/projects" component={Home} />
+          <Route exact path="/projects/Home" component={Home} />
+          <Route exact path="/projects/Members" component={Members} />
+          <Route exact path="/projects/Description" component={Desc} />
           <Route component={Error} />
         </Switch>
       </Router>

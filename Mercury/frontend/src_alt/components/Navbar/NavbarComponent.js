@@ -3,7 +3,8 @@ import NavbarHome from "./peripherals/NavbarHome";
 import NavbarClubs from "./peripherals/NavbarClubs";
 import NavbarLogin from "./peripherals/NavbarLogin";
 import NavbarProjects from "./peripherals/NavbarProjects";
-import Error from "../BaseComponents/errorComponent/Error";
+import NavBar404 from "./peripherals/NavBar404";
+
 import {
   HashRouter as Router,
   Route,
@@ -17,10 +18,6 @@ export class NavbarComponent extends Component {
     return (
       <Router>
         <div>
-          <h1>NavbarComponent</h1>
-
-          <NavbarGeneric />
-
           <Switch>
             <Route exact path="/" component={NavbarHome} />
             <Route exact path="/Home" component={NavbarHome} />
@@ -33,6 +30,7 @@ export class NavbarComponent extends Component {
             <Route exact path="/Clubs/Projects" component={NavbarClubs} />
             <Route exact path="/Clubs/Members" component={NavbarClubs} />
 
+<<<<<<< HEAD
             <Route exact path="/Projects" component={NavbarProjects} />
             <Route exact path="/Projects/Home" component={NavbarProjects} />
             <Route
@@ -41,11 +39,21 @@ export class NavbarComponent extends Component {
               component={NavbarProjects}
             />
             <Route exact path="/Projects/Members" component={NavbarProjects} />
+=======
+            <Route exact path="/Project" component={NavbarProjects} />
+            <Route exact path="/Project/Home" component={NavbarProjects} />
+            <Route
+              exact
+              path="/Project/Description"
+              component={NavbarProjects}
+            />
+            <Route exact path="/Project/Members" component={NavbarProjects} />
+>>>>>>> 29285682a64858cde58b5634e7fcfa68ad412cb7
 
             <Route exact path="/Login" component={NavbarLogin} />
             <Route exact path="/Register" component={NavbarLogin} />
 
-            <Route component={Error} />
+            <Route component={NavBar404} />
           </Switch>
         </div>
       </Router>

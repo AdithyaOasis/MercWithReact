@@ -86,7 +86,14 @@ export class Announcement extends Component {
           <div className="card-header">Announcements</div>
           <div className="card-body">
             <div className="card-text">
-              <div style={{ overflowY: "scroll", maxHeight: "100px" }}>
+              <div
+                style={{
+                  overflowY: "auto",
+                  maxHeight: "50px",
+                  display: "flex",
+                  flexDirection: "column-reverse",
+                }}
+              >
                 <ul className="card-text list-group">
                   {this.state.announcement.map((message) => (
                     <li className="list-group-item" key={message.id}>

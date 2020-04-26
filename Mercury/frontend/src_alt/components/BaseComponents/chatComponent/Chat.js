@@ -73,7 +73,14 @@ export class Chat extends Component {
         <div className="card  mb-3">
           <div className="card-header">Chats</div>
           <div className="card-body">
-            <div style={{ overflowY: "scroll", maxHeight: "250px" }}>
+            <div
+              style={{
+                overflowY: "auto",
+                maxHeight: "250px",
+                display: "flex",
+                flexDirection: "column-reverse",
+              }}
+            >
               <ul className="card-text ">
                 {this.state.chatList.map((message) => (
                   <Message text={message.content} key={message.id} />

@@ -28,11 +28,17 @@ export class Home extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-4 border border-dark"></div>
+            <div className="col-sm-4 border border-dark">
+              <Todo />
+            </div>
             <div className="col-sm-4">
               <Chat groupname={this.props.club.club_name} />
             </div>
+            <div className="col-sm-4">
+              <Drive />
+            </div>
           </div>
+        </div>
       </Fragment>
     );
   }

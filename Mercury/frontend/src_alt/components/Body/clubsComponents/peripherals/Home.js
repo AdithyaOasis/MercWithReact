@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
-//import Todoapp from "../../../BaseComponents/todoComponent/Todoapp";
 import Chat from "../../../BaseComponents/chatComponent/Chat";
 import Announement from "../../../BaseComponents/announcementComponent/Announcement";
+import Todo from "../../../BaseComponents/todoComponent/Todo";
+import Drive from "../../../BaseComponents/driveComponent/Drive";
 import { connect } from "react-redux";
 import axios from "axios";
 export class Home extends Component {
@@ -32,7 +33,6 @@ export class Home extends Component {
               <Chat groupname={this.props.club.club_name} />
             </div>
           </div>
-        </div>
       </Fragment>
     );
   }

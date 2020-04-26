@@ -3,6 +3,12 @@ from Clubs.models import Club, Members
 from django.contrib.auth.models import User
 
 
+
+class MemberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Members
+        fields = '__all__'
+
 class ClubSerializer(serializers.ModelSerializer):
     class Meta:
         model = Club
@@ -28,3 +34,4 @@ class MembersSerializer(serializers.ModelSerializer):
     class Meta:
         model = Members
         fields = '__all__'
+

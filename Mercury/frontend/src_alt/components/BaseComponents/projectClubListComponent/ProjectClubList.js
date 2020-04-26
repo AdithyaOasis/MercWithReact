@@ -31,7 +31,7 @@ export class ProjectClubList extends Component {
         //if user present in the club
         if (this.props.user.clubs.hasOwnProperty(id)) {
           this.props.clubEnter(id);
-          this.props.history.push("/clubs/home");
+          setTimeout(this.props.history.push("/clubs/home"), 2000);
         } else {
           console.log("Not a part of the club");
         }

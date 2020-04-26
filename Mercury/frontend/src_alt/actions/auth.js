@@ -11,24 +11,6 @@ import {
   LOGOUT_FAIL,
 } from "./types";
 
-//just a function we are using
-export const tokenConfig = (getState) => {
-  //Get Token fromm state
-  const token = getState().auth.token;
-
-  //Headers
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-  //if token add to headers config
-  if (token) {
-    config.headers["Authorization"] = `Token ${token}`;
-  }
-  return config;
-};
-
 export const loaduser = () => (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
   //check when loading done
@@ -114,4 +96,22 @@ export const logout = () => (dispatch, getState) => {
     .catch((err) => {
       console.log(err);
     });
+};
+
+//just a function we are using
+export const tokenConfig = (getState) => {
+  //Get Token fromm state
+  const token = getState().auth.token;
+
+  //Headers
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  //if token add to headers config
+  if (token) {
+    config.headers["Authorization"] = `Token ${token}`;
+  }
+  return config;
 };

@@ -2,25 +2,19 @@ import React, { Component, Fragment } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import ProjectList from "../../../BaseComponents/projectClubListComponent/ProjectClubList";
 
-import { projectEnter } from "../../../../actions/projects";
-import {
-  HashRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-  withRouter,
-} from "react-router-dom";
 export class Projects extends Component {
   state = {
-    projects: [],
+    list: [],
   };
-  Enter = (Project) => {
-    this.props.projectEnter(Project);
-    this.props.history.push("/project");
+  static propTypes = {
+    club: PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
   };
 
   componentDidMount() {
+    //gets the list of all the project in the club
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -28,38 +22,34 @@ export class Projects extends Component {
     };
     const body = JSON.stringify({ id: this.props.club.id });
     axios.post("./api/projects/project", body, config).then((res) => {
-      const projects = res.data;
-      this.setState({ projects });
+      const list = res.data;
+      this.setState({ list });
     });
   }
 
   render() {
+    console.log(this.state.list);
+    if (!this.props.club) {
+      return <h1>Not in club</h1>;
+    }
     return (
-      <Router>
-        <Fragment>
-          <h2>Projects:-</h2>
-          <div>
-            <div className="list-group">
-              {this.state.projects.map((project) => (
-                <button
-                  key={project.id}
-                  className="list-group-item list-group-item-action"
-                  onClick={() => this.Enter(project)}
-                >
-                  {project.project_Name}
-                </button>
-              ))}
-            </div>
-          </div>
-        </Fragment>
-      </Router>
+      <Fragment>
+        <h2>Projects:-</h2>
+        <div>
+          <ProjectList
+            type="projectList"
+            list={this.state.list}
+            user={this.props.user}
+          />
+        </div>
+      </Fragment>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
   club: state.club.club,
+  user: state.auth.user,
 });
 
-export default connect(mapStateToProps, { projectEnter })(withRouter(Projects));
-//export default Projects;
+export default connect(mapStateToProps)(Projects);

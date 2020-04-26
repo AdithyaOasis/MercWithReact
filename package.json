@@ -1,7 +1,7 @@
 {
-  "name": "MercuryWithReact",
+  "name": "mercurywithreact",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mercury with react, ill start using branch for the main one later",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development --watch ./Mercury/frontend/src/index.js --output ./Mercury/frontend/static/frontend/main.js",
@@ -43,5 +43,13 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdithyaOasis/MercWithReact.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AdithyaOasis/MercWithReact/issues"
+  },
+  "homepage": "https://github.com/AdithyaOasis/MercWithReact#readme"
 }

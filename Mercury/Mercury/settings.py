@@ -45,6 +45,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'knox',
     'Events',
+    'Announcements',
+    'Chat',
+    'Drive',
+    'Todo',
 ]
 
 MIDDLEWARE = [

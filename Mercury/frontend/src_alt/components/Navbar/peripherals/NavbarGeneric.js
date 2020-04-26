@@ -36,6 +36,11 @@ export class NavbarGeneric extends Component {
                     {this.props.link3Name}
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={this.props.link4}>
+                    {this.props.link4Name}
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="mx-auto order-0">
@@ -57,11 +62,6 @@ export class NavbarGeneric extends Component {
                   <Link className="nav-item nav-link" to="/login">
                     Login
                   </Link>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/#">
-                    Search Bar
-                  </a>
                 </li>
               </ul>
             </div>

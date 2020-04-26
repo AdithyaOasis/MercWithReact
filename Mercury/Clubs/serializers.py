@@ -2,8 +2,6 @@ from rest_framework import serializers
 from Clubs.models import Club, Members
 from django.contrib.auth.models import User
 
-
-
 class ClubSerializer(serializers.ModelSerializer):
     class Meta:
         model = Club

@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Todoapp from "../../../BaseComponents/todoComponent/Todoapp";
+import Todo from "../../../BaseComponents/todoComponent/Todo";
+import Drive from "../../../BaseComponents/driveComponent/Drive";
 import { connect } from "react-redux";
 export class Home extends Component {
   render() {
@@ -10,12 +12,9 @@ export class Home extends Component {
       <Fragment>
         <div className="container">
           <h1>Home</h1>
-          <div className="row">
-            <div className="col-sm-4 border border-dark">
-              <Todoapp />
-            </div>
+            <Todo />
+            <Drive />
           </div>
-        </div>
       </Fragment>
     );
   }

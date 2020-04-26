@@ -13,7 +13,7 @@ export class Clubs extends Component {
     };
   }
   static propTypes = {
-    user: PropTypes.object.isRequired,
+    user: PropTypes.object,
   };
 
   componentDidMount() {

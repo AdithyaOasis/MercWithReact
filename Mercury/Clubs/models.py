@@ -31,4 +31,7 @@ class Members(models.Model):
         p = self.club.club_name + '/' + self.member.username
         return p
 
-# After the completion of the to - do database create manytomany with it in clubs
+#Types of members:-
+# 1) admin
+# 2) subadmin
+# 3) member

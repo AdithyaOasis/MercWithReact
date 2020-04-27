@@ -9,4 +9,10 @@ urlpatterns = [
     path('', include('Projects.urls')),
     path('', include('Accounts.urls')),
     path('', include('Events.urls')),
+    path('', include('Announcements.urls')),
+    path('', include('Chat.urls')),
+    path('', include('Drive.urls')),
+    path('', include('Todo.urls')),
+    path('', include('Profile.urls')),
+    
 ]

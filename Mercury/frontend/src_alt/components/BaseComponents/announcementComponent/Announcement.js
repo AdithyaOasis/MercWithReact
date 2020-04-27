@@ -12,32 +12,32 @@ export class Announcement extends Component {
   }
 
   componentDidMount() {
-    //setTimeout(() => {
-    //console.log(this.state.club);
-    //  if (this.props.club) {
-    console.log("Props");
-    const body = JSON.stringify({
-      send: "get",
-      user_id: "",
-      content: "",
-      group: this.props.groupname,
-    });
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    axios
-      .post("./api/announcements", body, config)
-      .then((res) => {
-        this.setState({ announcement: res.data });
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log("Fs in the chat");
+    setTimeout(() => {
+      //console.log(this.state.club);
+      //  if (this.props.club) {
+      console.log("Props");
+      const body = JSON.stringify({
+        send: "get",
+        user_id: "",
+        content: "",
+        group: this.props.groupname,
       });
-    // }, 1000);
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      axios
+        .post("./api/announcements", body, config)
+        .then((res) => {
+          this.setState({ announcement: res.data });
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log("Fs in the chat");
+        });
+    }, 1000);
   }
   onChange = (e) => {
     this.setState({ text: e.target.value });
@@ -70,7 +70,7 @@ export class Announcement extends Component {
 
   renderConditional = () => {
     console.log("inside renderconditional");
-    if (true) {
+    if (this.props.admins.hasOwnProperty(this.props.user.id)) {
       return (
         <form onSubmit={this.onSubmit}>
           <input type="text" onChange={this.onChange} />
@@ -90,6 +90,7 @@ export class Announcement extends Component {
                 style={{
                   overflowY: "auto",
                   maxHeight: "50px",
+                  height: "50px",
                   display: "flex",
                   flexDirection: "column-reverse",
                 }}

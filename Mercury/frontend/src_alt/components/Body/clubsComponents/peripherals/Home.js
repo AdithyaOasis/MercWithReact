@@ -24,7 +24,10 @@ export class Home extends Component {
           <h1>Home</h1>
           <div className="row">
             <div className="col-sm-8 border border-dark">
-              <Announement groupname={this.props.club.club_name} />
+              <Announement
+                groupname={this.props.club.club.club_name}
+                admins={this.props.club.admins}
+              />
             </div>
           </div>
           <div className="row">
@@ -32,7 +35,7 @@ export class Home extends Component {
               <Todo />
             </div>
             <div className="col-sm-4">
-              <Chat groupname={this.props.club.club_name} />
+              <Chat groupname={this.props.club.club.club_name} />
             </div>
             <div className="col-sm-4">
               <Drive />

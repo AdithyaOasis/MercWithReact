@@ -4,41 +4,41 @@ import { connect } from "react-redux";
 
 export class Drive extends Component {
   state = {
-	links: [],
-	link_name: "",
-	link: "",
-	link_type: ""
+    links: [],
+    link_name: "",
+    link: "",
+    link_type: "",
   };
 
   componentDidMount() {
-	setTimeout(() => {
-	console.log(this.props.group)
-    const body = JSON.stringify({
-      send: "get",
-      link_type: "file",
-      link: "https://www.google.com/",
-      link_name: "club1 link2 varun",
-      user_id: "1",
-      delete_id: "1",
-      group: this.props.group,
-    });
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    console.log("Making the request for drive links");
-    axios
-      .post("./api/drive", body, config)
-      .then((res) => {
-        const links = res.data;
-        console.log(links);
-        this.setState({ links });
-      })
-      .catch((err) => {
-        console.log("Promise failed!!", err);
-	  });
-	}, 1000)
+    setTimeout(() => {
+      console.log(this.props.group);
+      const body = JSON.stringify({
+        send: "get",
+        link_type: "file",
+        link: "https://www.google.com/",
+        link_name: "club1 link2 varun",
+        user_id: "1",
+        delete_id: "1",
+        group: this.props.group,
+      });
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      console.log("Making the request for drive links");
+      axios
+        .post("./api/drive", body, config)
+        .then((res) => {
+          const links = res.data;
+          console.log(links);
+          this.setState({ links });
+        })
+        .catch((err) => {
+          console.log("Promise failed!!", err);
+        });
+    }, 1000);
   }
 
   deleteLink = (id) => {
@@ -73,41 +73,40 @@ export class Drive extends Component {
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   onSubmit = (e) => {
-	e.preventDefault();
-	console.log(this.state.link);
-	console.log(this.state.link_name);
-	console.log(this.state.link_type);
-	console.log(this.props.user_id);
-	console.log(this.props.group);
-	const body = JSON.stringify({
-		send: "post",
-		link_type: this.state.link_type,
-		link: this.state.link,
-		link_name: this.state.link_name,
-		user_id: this.props.user_id,
-		delete_id: "2",
-		group: this.props.group,
-	  });
-	  const config = {
-		headers: {
-		  "Content-Type": "application/json",
-		},
-	  };
-	  console.log("Posting to drive links");
-	  axios
-		.post("./api/drive", body, config)
-		.then((res) => {
-		  const links = res.data;
-		  console.log(links);
-		  this.setState({ links });
-		})
-		.catch((err) => {
-		  console.log("Promise failed!!", err);
-		});
-  }
+    e.preventDefault();
+    console.log(this.state.link);
+    console.log(this.state.link_name);
+    console.log(this.state.link_type);
+    console.log(this.props.user_id);
+    console.log(this.props.group);
+    const body = JSON.stringify({
+      send: "post",
+      link_type: this.state.link_type,
+      link: this.state.link,
+      link_name: this.state.link_name,
+      user_id: this.props.user_id,
+      delete_id: "2",
+      group: this.props.group,
+    });
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    console.log("Posting to drive links");
+    axios
+      .post("./api/drive", body, config)
+      .then((res) => {
+        const links = res.data;
+        console.log(links);
+        this.setState({ links });
+      })
+      .catch((err) => {
+        console.log("Promise failed!!", err);
+      });
+  };
 
   render() {
-
     return (
       <div>
         <h1>Drive</h1>
@@ -152,8 +151,8 @@ export class Drive extends Component {
                 onChange={this.onChange}
                 value={this.state.link}
               />
-			</div>
-			<div className="form-group">
+            </div>
+            <div className="form-group">
               <label>link type</label>
               <input
                 type="text"
@@ -177,7 +176,9 @@ export class Drive extends Component {
 
 const mapStateToProps = (state) => ({
   user_id: state.auth.user.user.id,
-  group: state.project.inProject ? state.project.project.project_Name : state.club.club.club_name 
+  group: state.project.inProject
+    ? state.project.project.project_Name
+    : state.club.club.club.club_name,
 });
 
 export default connect(mapStateToProps)(Drive);

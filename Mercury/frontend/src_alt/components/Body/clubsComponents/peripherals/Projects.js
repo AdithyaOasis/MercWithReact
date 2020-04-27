@@ -48,7 +48,7 @@ export class Projects extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  club: state.club.club,
+  club: state.club.club.club,
   user: state.auth.user,
 });
 

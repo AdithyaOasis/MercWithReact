@@ -38,7 +38,7 @@ export class Members extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  club_name: state.club.club.club_name,
+  club_name: state.club.club.club.club_name,
 });
 
 export default connect(mapStateToProps)(Members);

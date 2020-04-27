@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 
 export class Todo extends Component {
   state = {
-	tasks: [],
-	task_content: ""
+    tasks: [],
+    task_content: "",
   };
 
   componentDidMount() {
@@ -39,14 +39,48 @@ export class Todo extends Component {
   }
 
   deleteTask = (id) => {
-	setTimeout(() => {
-    console.log("deleting task with id", id);
+    setTimeout(() => {
+      console.log("deleting task with id", id);
+      const body = JSON.stringify({
+        send: "delete",
+        user_created_by_id: "2",
+        user_assigned_to_id: "1",
+        delete_id: id,
+        task_content: "task2 in club2 form varun487 -> varun",
+        group: this.props.group,
+      });
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      console.log("Making the request for todo tasks");
+      axios
+        .post("./api/todo", body, config)
+        .then((res) => {
+          const tasks = res.data;
+          console.log(tasks);
+          this.setState({ tasks });
+        })
+        .catch((err) => {
+          console.log("Promise failed!!", err);
+        });
+    }, 1000);
+  };
+
+  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+
+  onSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state.task_content);
+    console.log(this.props.user_id);
+    console.log(this.props.group);
     const body = JSON.stringify({
-      send: "delete",
-      user_created_by_id: "2",
+      send: "post",
+      user_created_by_id: this.props.user_id,
       user_assigned_to_id: "1",
-      delete_id: id,
-      task_content: "task2 in club2 form varun487 -> varun",
+      delete_id: "1",
+      task_content: this.state.task_content,
       group: this.props.group,
     });
     const config = {
@@ -54,7 +88,9 @@ export class Todo extends Component {
         "Content-Type": "application/json",
       },
     };
-    console.log("Making the request for todo tasks");
+
+    console.log("Posting to todo tasks");
+
     axios
       .post("./api/todo", body, config)
       .then((res) => {
@@ -65,43 +101,7 @@ export class Todo extends Component {
       .catch((err) => {
         console.log("Promise failed!!", err);
       });
-  },1000)};
-
-  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
-
-  onSubmit = (e) => {
-	e.preventDefault();
-	console.log(this.state.task_content);
-	console.log(this.props.user_id);
-	console.log(this.props.group);
-	const body = JSON.stringify({
-		send: "post",
-      	user_created_by_id: this.props.user_id,
-      	user_assigned_to_id: "1",
-      	delete_id: "1",
-      	task_content: this.state.task_content,
-      	group: this.props.group,
-	});
-	const config = {
-		headers: {
-		  "Content-Type": "application/json",
-		},
-	};
-	
-	console.log("Posting to todo tasks");
-	
-	  axios
-		.post("./api/todo", body, config)
-		.then((res) => {
-		  const tasks = res.data;
-		  console.log(tasks);
-		  this.setState({ tasks });
-		})
-		.catch((err) => {
-		  console.log("Promise failed!!", err);
-		});
-}
-
+  };
 
   render() {
     return (
@@ -150,7 +150,7 @@ const mapStateToProps = (state) => ({
   user_id: state.auth.user.user.id,
   group: state.project.inProject
     ? state.project.project.project_Name
-    : state.club.club.club_name,
+    : state.club.club.club.club_name,
 });
 
 export default connect(mapStateToProps)(Todo);

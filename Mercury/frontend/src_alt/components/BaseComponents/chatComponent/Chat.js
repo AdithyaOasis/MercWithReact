@@ -14,30 +14,30 @@ export class Chat extends Component {
   componentDidMount() {
     //console.log(this.state.club);
     //  if (this.props.club) {
-    //setTimeout(() => {
-    console.log("Props");
-    const body = JSON.stringify({
-      send: "get",
-      user_id: "",
-      content: "",
-      group: this.props.groupname,
-    });
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    axios
-      .post("./api/chat", body, config)
-      .then((res) => {
-        this.setState({ chatList: res.data });
-        //console.log(res.data);
-      })
-      .catch((err) => {
-        console.log("Fs in the chat");
+    setTimeout(() => {
+      console.log("Props");
+      const body = JSON.stringify({
+        send: "get",
+        user_id: "",
+        content: "",
+        group: this.props.groupname,
       });
-    //}, 1000);
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      axios
+        .post("./api/chat", body, config)
+        .then((res) => {
+          this.setState({ chatList: res.data });
+          //console.log(res.data);
+        })
+        .catch((err) => {
+          console.log("Fs in the chat");
+        });
+    }, 1000);
   }
   onChange = (e) => {
     this.setState({ text: e.target.value });
@@ -76,6 +76,7 @@ export class Chat extends Component {
             <div
               style={{
                 overflowY: "auto",
+                height: "250px",
                 maxHeight: "250px",
                 display: "flex",
                 flexDirection: "column-reverse",

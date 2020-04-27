@@ -18,7 +18,14 @@ class ClubViewSet(APIView):
     def post(self, request):
         club = Club.objects.get(id=request.data['id'])
         serializer = ClubSerializer(club).data
-        return Response(serializer)
+        admins = User.objects.filter(club = club,members__member_Type = "admin")
+        dict = {}
+        for i in admins:
+            dict[i.id] = i.username
+        return Response({
+            "club":serializer,
+            "admins":dict
+            })
 
 
 class ClubMemberViewSet(APIView):
@@ -60,7 +67,7 @@ class ClubProject(APIView):
         p1.member.add(supervisor, through_defaults = {'member_Type':'supervisor'})
         for i in projectMembers:
             member = User.objects.get(id = i)
-            p1.member.add(member, through_defaults = {'member_Type':'member'})
+            p1.member.add(meqmber, through_defaults = {'member_Type':'member'})
         club.projects.add(p1)
         serializer = ProjectSerializer(p1).data
         return Response(serializer)

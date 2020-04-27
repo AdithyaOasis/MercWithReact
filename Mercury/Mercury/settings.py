@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'Chat',
     'Drive',
     'Todo',
+    'Profile',
 ]
 
 MIDDLEWARE = [

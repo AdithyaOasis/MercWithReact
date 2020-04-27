@@ -28,10 +28,13 @@ export class Members extends Component {
       });
   }
   render() {
-    if (this.state.members.length === 0) return <h1>Not yet</h1>;
+    if (this.state.members.length === 0) return <h1>No Members</h1>;
     return (
       <div>
-        <MemList type="club" list={this.state.members} />
+        <div className="container">
+          <h1>Members</h1>
+          <MemList type="club" list={this.state.members} />
+        </div>
       </div>
     );
   }

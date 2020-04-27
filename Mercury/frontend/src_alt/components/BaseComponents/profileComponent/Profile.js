@@ -79,9 +79,9 @@ export class Profile extends Component {
       <div>
         {this.props.isAuthenticated ? (
           <div id="user-profile">
-            <div className="container">
-              {/* <h1>Name</h1>
-              <ul>
+            <div className="container border">
+              <h1>Profile</h1>
+              {/*<ul>
                 <li>email:-{email}</li>
                 <li>username:-{username}</li>
                 <li>id:-{id}</li>

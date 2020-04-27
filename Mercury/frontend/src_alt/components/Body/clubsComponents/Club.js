@@ -14,7 +14,6 @@ export class Club extends Component {
     return (
       <Router>
         <div>
-          <h1>Club</h1>
           <Switch>
             <Route exact path="/clubs" component={Home} />
             <Route exact path="/clubs/Home" component={Home} />

@@ -21,7 +21,6 @@ export class Home extends Component {
     return (
       <Fragment>
         <div className="container">
-          <h1>Home</h1>
           <div className="row">
             <div className="col-sm-8 border border-dark">
               <Announement

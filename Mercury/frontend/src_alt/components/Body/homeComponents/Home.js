@@ -15,7 +15,6 @@ export class Home extends Component {
     return (
       <Router>
         <div>
-          Home
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/Home" component={Homepage} />

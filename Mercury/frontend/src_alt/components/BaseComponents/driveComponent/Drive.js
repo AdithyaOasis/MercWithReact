@@ -12,7 +12,7 @@ export class Drive extends Component {
 
   componentDidMount() {
     setTimeout(() => {
-      console.log(this.props.group);
+      //console.log(this.props.group);
       const body = JSON.stringify({
         send: "get",
         link_type: "file",
@@ -27,12 +27,12 @@ export class Drive extends Component {
           "Content-Type": "application/json",
         },
       };
-      console.log("Making the request for drive links");
+      //console.log("Making the request for drive links");
       axios
         .post("./api/drive", body, config)
         .then((res) => {
           const links = res.data;
-          console.log(links);
+          //console.log(links);
           this.setState({ links });
         })
         .catch((err) => {
@@ -42,7 +42,7 @@ export class Drive extends Component {
   }
 
   deleteLink = (id) => {
-    console.log("deleting link with id", id);
+    //console.log("deleting link with id", id);
     const body = JSON.stringify({
       send: "delete",
       link_type: "file",
@@ -57,12 +57,12 @@ export class Drive extends Component {
         "Content-Type": "application/json",
       },
     };
-    console.log("Making the request for drive links");
+    //console.log("Making the request for drive links");
     axios
       .post("./api/drive", body, config)
       .then((res) => {
         const links = res.data;
-        console.log(links);
+        //console.log(links);
         this.setState({ links });
       })
       .catch((err) => {
@@ -74,11 +74,11 @@ export class Drive extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.link);
-    console.log(this.state.link_name);
-    console.log(this.state.link_type);
-    console.log(this.props.user_id);
-    console.log(this.props.group);
+    //console.log(this.state.link);
+    //console.log(this.state.link_name);
+    //console.log(this.state.link_type);
+    //console.log(this.props.user_id);
+    //console.log(this.props.group);
     const body = JSON.stringify({
       send: "post",
       link_type: this.state.link_type,
@@ -93,12 +93,12 @@ export class Drive extends Component {
         "Content-Type": "application/json",
       },
     };
-    console.log("Posting to drive links");
+    //console.log("Posting to drive links");
     axios
       .post("./api/drive", body, config)
       .then((res) => {
         const links = res.data;
-        console.log(links);
+        //console.log(links);
         this.setState({ links });
       })
       .catch((err) => {

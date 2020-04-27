@@ -7,8 +7,12 @@ import {
   Redirect,
   withRouter,
 } from "react-router-dom";
+import { connect } from 'react-redux';
+import {clubExit} from '../../../actions/clubs';
+import {projectExit} from '../../../actions/projects';
 
 export class NavbarGeneric extends Component {
+  
   render() {
     return (
       <Router>
@@ -17,7 +21,7 @@ export class NavbarGeneric extends Component {
             <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                  <a className="nav-link" href="/#/home">
+                  <a className="nav-link" href="/#/home" onClick={() => {this.props.clubExit(); this.props.projectExit()}}>
                     Mercury
                   </a>
                 </li>
@@ -72,4 +76,10 @@ export class NavbarGeneric extends Component {
   }
 }
 
-export default NavbarGeneric;
+const mapStateToProps = (state) => ({
+
+})
+
+export default connect(mapStateToProps, {projectExit, clubExit})(NavbarGeneric);
+
+//export default NavbarGeneric;

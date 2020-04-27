@@ -1,5 +1,4 @@
 # MercWithReact
-Mercury with react, ill start using branch for the main one later
 
 <br>
 Project for Club management and Project management for colleges<br>

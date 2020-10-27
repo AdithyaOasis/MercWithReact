@@ -13,7 +13,7 @@ chardet==3.0.4
 constantly==15.1.0
 coverage==5.0.4
 crypto==1.4.1
-cryptography==2.8
+cryptography==3.2
 daphne==2.4.1
 defusedxml==0.6.0
 diff-match-patch==20181111
